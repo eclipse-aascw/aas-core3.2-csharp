@@ -1,0 +1,22 @@
+{
+  "dataSpecification": {
+    "type": "ExternalReference",
+    "keys": [
+      {
+        "type": "GlobalReference",
+        "value": "urn:some-company:10:9ac9d1a6"
+      }
+    ]
+  },
+  "dataSpecificationContent": {
+    "preferredName": [
+      {
+        "language": "en-JM-x-b435b532",
+        "text": "0"
+      }
+    ],
+    "symbol": "<\u0103<P\udb63\udc7d\u00b2|dn\u009c\u00de\u00ae",
+    "modelType": "DataSpecificationUom"
+  },
+  "unexpectedAdditionalProperty": "UNEXPECTED-ADDITIONAL-PROPERTY"
+}

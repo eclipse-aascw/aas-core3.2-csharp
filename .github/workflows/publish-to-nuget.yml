@@ -1,0 +1,32 @@
+name: Publish to NuGet
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+    branches:
+      - '*/Fix-nuget-publishing'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    name: Update NuGet package
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Install .NET 10
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build solution and generate NuGet package
+        working-directory: src/AasCore.Aas3_2
+        run: dotnet pack -c Release -o out
+
+      - name: Push generated package
+        working-directory: src/AasCore.Aas3_2
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
+        run: dotnet nuget push out\*.nupkg --skip-duplicate --no-symbols --source https://api.nuget.org/v3/index.json -k $env:NUGET_AUTH_TOKEN
