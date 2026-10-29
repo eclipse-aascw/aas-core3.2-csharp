@@ -2455,7 +2455,7 @@ namespace AasCore.Aas3_2
             if (
                 (element.Qualifiers != null)
                 && (
-                    element.Qualifiers.Any(
+                    element.Qualifiers!.Any(
                         qualifier => qualifier.KindOrDefault() == QualifierKind.TemplateQualifier)
                 )
             )
@@ -2466,7 +2466,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.ISubmodelElementList)element).Value != null)
                 && (
-                    ((Our.ISubmodelElementList)element).Value.Any(
+                    ((Our.ISubmodelElementList)element).Value!.Any(
                         child => Verification.SubmodelElementHasTemplateQualifierInTree(child))
                 );
             }
@@ -2474,7 +2474,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.ISubmodelElementCollection)element).Value != null)
                 && (
-                    ((Our.ISubmodelElementCollection)element).Value.Any(
+                    ((Our.ISubmodelElementCollection)element).Value!.Any(
                         child => Verification.SubmodelElementHasTemplateQualifierInTree(child))
                 );
             }
@@ -2482,7 +2482,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.IEntity)element).Statements != null)
                 && (
-                    ((Our.IEntity)element).Statements.Any(
+                    ((Our.IEntity)element).Statements!.Any(
                         child => Verification.SubmodelElementHasTemplateQualifierInTree(child))
                 );
             }
@@ -2490,7 +2490,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.IAnnotatedRelationshipElement)element).Annotations != null)
                 && (
-                    ((Our.IAnnotatedRelationshipElement)element).Annotations.Any(
+                    ((Our.IAnnotatedRelationshipElement)element).Annotations!.Any(
                         child => Verification.SubmodelElementHasTemplateQualifierInTree(child))
                 );
             }
@@ -2524,9 +2524,9 @@ namespace AasCore.Aas3_2
             if (element is Our.ISubmodelElementList)
             {
                 return (((Our.ISubmodelElementList)element).Value != null)
-                && ((Our.ISubmodelElementList)element).Value.Count == 1
+                && ((Our.ISubmodelElementList)element).Value!.Count == 1
                 && (
-                    ((Our.ISubmodelElementList)element).Value.All(
+                    ((Our.ISubmodelElementList)element).Value!.All(
                         child => Verification.SubmodelElementListsHaveExactlyOneElementInTree(child))
                 );
             }
@@ -2534,7 +2534,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.ISubmodelElementCollection)element).Value == null)
                 || (
-                    ((Our.ISubmodelElementCollection)element).Value.All(
+                    ((Our.ISubmodelElementCollection)element).Value!.All(
                         child => Verification.SubmodelElementListsHaveExactlyOneElementInTree(child))
                 );
             }
@@ -2542,7 +2542,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.IEntity)element).Statements == null)
                 || (
-                    ((Our.IEntity)element).Statements.All(
+                    ((Our.IEntity)element).Statements!.All(
                         child => Verification.SubmodelElementListsHaveExactlyOneElementInTree(child))
                 );
             }
@@ -2550,7 +2550,7 @@ namespace AasCore.Aas3_2
             {
                 return (((Our.IAnnotatedRelationshipElement)element).Annotations == null)
                 || (
-                    ((Our.IAnnotatedRelationshipElement)element).Annotations.All(
+                    ((Our.IAnnotatedRelationshipElement)element).Annotations!.All(
                         child => Verification.SubmodelElementListsHaveExactlyOneElementInTree(child))
                 );
             }
@@ -2766,7 +2766,7 @@ namespace AasCore.Aas3_2
                 dataSpecification => !(dataSpecification.DataSpecificationContent is Our.IDataSpecificationIec61360)
                     || (
                         (((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType != null)
-                        && Our.Constants.DataTypeIec61360ForPropertyOrValue.Contains(((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType.Value)
+                        && Our.Constants.DataTypeIec61360ForPropertyOrValue.Contains(((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType!.Value)
                     ));
         }  // public static bool DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType
 
@@ -2782,7 +2782,7 @@ namespace AasCore.Aas3_2
                 dataSpecification => !(dataSpecification.DataSpecificationContent is Our.IDataSpecificationIec61360)
                     || (
                         (((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType != null)
-                        && Our.Constants.DataTypeIec61360ForReference.Contains(((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType.Value)
+                        && Our.Constants.DataTypeIec61360ForReference.Contains(((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType!.Value)
                     ));
         }  // public static bool DataSpecificationIec61360sForReferenceHaveAppropriateDataType
 
@@ -2798,7 +2798,7 @@ namespace AasCore.Aas3_2
                 dataSpecification => !(dataSpecification.DataSpecificationContent is Our.IDataSpecificationIec61360)
                     || (
                         (((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType != null)
-                        && Our.Constants.DataTypeIec61360ForDocument.Contains(((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType.Value)
+                        && Our.Constants.DataTypeIec61360ForDocument.Contains(((Our.IDataSpecificationIec61360)dataSpecification.DataSpecificationContent).DataType!.Value)
                     ));
         }  // public static bool DataSpecificationIec61360sForDocumentHaveAppropriateDataType
 
@@ -3702,7 +3702,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -3722,7 +3722,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.RefersTo != null)
-                    || (that.RefersTo.Count >= 1)))
+                    || (that.RefersTo!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -3731,7 +3731,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.ValueConsistentWithXsdType(that.Value, that.ValueTypeOrDefault())))
+                    || Verification.ValueConsistentWithXsdType(that.Value!, that.ValueTypeOrDefault())))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -3809,7 +3809,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -3822,7 +3822,7 @@ namespace AasCore.Aas3_2
                         (that.CreatedAt != null)
                         && (that.UpdatedAt != null)
                     )
-                    || Verification.DateTimeUtcLessOrInvalid(that.CreatedAt, that.UpdatedAt)))
+                    || Verification.DateTimeUtcLessOrInvalid(that.CreatedAt!, that.UpdatedAt!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -3921,7 +3921,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -3941,7 +3941,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.ValueConsistentWithXsdType(that.Value, that.ValueType)))
+                    || Verification.ValueConsistentWithXsdType(that.Value!, that.ValueType)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4027,7 +4027,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4036,7 +4036,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4046,7 +4046,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4056,7 +4056,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4065,7 +4065,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4075,7 +4075,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4084,7 +4084,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4094,7 +4094,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Submodels != null)
-                    || (that.Submodels.Count >= 1)))
+                    || (that.Submodels!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4104,7 +4104,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.DerivedFrom != null)
                     || Verification.IsModelReferenceTo(
-                        that.DerivedFrom,
+                        that.DerivedFrom!,
                         KeyTypes.AssetAdministrationShell)))
                 {
                     yield return new Reporting.Error(
@@ -4116,7 +4116,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.Submodels != null)
                     || (
-                        that.Submodels.All(
+                        that.Submodels!.All(
                             reference => Verification.IsModelReferenceTo(reference, KeyTypes.Submodel))
                     )))
                 {
@@ -4248,11 +4248,11 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.SpecificAssetIds != null)
                     || (
-                        that.SpecificAssetIds.All(
+                        that.SpecificAssetIds!.All(
                             specificAssetId => !Verification.SpecificAssetIdNameMatchesGlobalAssetId(specificAssetId.Name)
                                 || (
                                     (that.GlobalAssetId != null)
-                                    && specificAssetId.Value == that.GlobalAssetId
+                                    && specificAssetId.Value == that.GlobalAssetId!
                                 ))
                     )))
                 {
@@ -4274,7 +4274,7 @@ namespace AasCore.Aas3_2
                     )
                     && (
                         !(that.SpecificAssetIds != null)
-                        || (that.SpecificAssetIds.Count >= 1)
+                        || (that.SpecificAssetIds!.Count >= 1)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4285,7 +4285,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SpecificAssetIds != null)
-                    || (that.SpecificAssetIds.Count >= 1)))
+                    || (that.SpecificAssetIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4377,7 +4377,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4397,7 +4397,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.ExternalSubjectId != null)
-                    || (that.ExternalSubjectId.Type == ReferenceTypes.ExternalReference)))
+                    || (that.ExternalSubjectId!.Type == ReferenceTypes.ExternalReference)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4459,7 +4459,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4468,7 +4468,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4478,7 +4478,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4488,7 +4488,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4497,7 +4497,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4507,7 +4507,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4516,7 +4516,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4536,7 +4536,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4545,7 +4545,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4555,7 +4555,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4565,7 +4565,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SubmodelElements != null)
-                    || (that.SubmodelElements.Count >= 1)))
+                    || (that.SubmodelElements!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4576,7 +4576,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.SubmodelElements != null)
                     || (
-                        that.SubmodelElements.All(
+                        that.SubmodelElements!.All(
                             item => item.IdShort != null)
                     )))
                 {
@@ -4590,7 +4590,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SubmodelElements != null)
-                    || Verification.IdShortsAreUnique(that.SubmodelElements)))
+                    || Verification.IdShortsAreUnique(that.SubmodelElements!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4603,7 +4603,7 @@ namespace AasCore.Aas3_2
                     !(that.KindOrDefault() == ModellingKind.Template)
                     || (
                         (that.SubmodelElements != null)
-                        && Verification.SubmodelElementListsInSubmodelElementsHaveExactlyOneElement(that.SubmodelElements)
+                        && Verification.SubmodelElementListsInSubmodelElementsHaveExactlyOneElement(that.SubmodelElements!)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4617,7 +4617,7 @@ namespace AasCore.Aas3_2
                     !(that.SubmodelElements != null)
                     || (
                         !(that.KindOrDefault() != ModellingKind.Template)
-                        || Verification.SubmodelElementsHaveNoTemplateQualifiers(that.SubmodelElements)
+                        || Verification.SubmodelElementsHaveNoTemplateQualifiers(that.SubmodelElements!)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4635,7 +4635,7 @@ namespace AasCore.Aas3_2
                     !(that.Qualifiers != null)
                     || (
                         !(
-                            that.Qualifiers.Any(
+                            that.Qualifiers!.Any(
                                 qualifier => qualifier.KindOrDefault() == QualifierKind.TemplateQualifier)
                         )
                         || (that.KindOrDefault() == ModellingKind.Template)
@@ -4800,7 +4800,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4809,7 +4809,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4819,7 +4819,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4829,7 +4829,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4838,7 +4838,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4848,7 +4848,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4857,7 +4857,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4877,7 +4877,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4886,7 +4886,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -4896,7 +4896,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5034,7 +5034,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5043,7 +5043,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5053,7 +5053,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5063,7 +5063,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5072,7 +5072,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5082,7 +5082,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5091,7 +5091,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5111,7 +5111,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5120,7 +5120,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5130,7 +5130,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5140,7 +5140,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || (that.Value.Count >= 1)))
+                    || (that.Value!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5153,9 +5153,9 @@ namespace AasCore.Aas3_2
                         && (that.SemanticIdListElement != null)
                     )
                     || (
-                        that.Value.All(
+                        that.Value!.All(
                             child => !(child.SemanticId != null)
-                                || Verification.ReferenceKeyValuesEqual(child.SemanticId, that.SemanticIdListElement))
+                                || Verification.ReferenceKeyValuesEqual(child.SemanticId!, that.SemanticIdListElement!))
                     )))
                 {
                     yield return new Reporting.Error(
@@ -5167,7 +5167,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.SubmodelElementsHaveIdenticalSemanticIds(that.Value)))
+                    || Verification.SubmodelElementsHaveIdenticalSemanticIds(that.Value!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5178,7 +5178,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.Value != null)
                     || (
-                        that.Value.All(
+                        that.Value!.All(
                             element => Verification.SubmodelElementIsOfType(element, that.TypeValueListElement))
                     )))
                 {
@@ -5199,7 +5199,7 @@ namespace AasCore.Aas3_2
                     )
                     || (
                         (that.ValueTypeListElement != null)
-                        && Verification.PropertiesOrRangesHaveValueType(that.Value, that.ValueTypeListElement.Value)
+                        && Verification.PropertiesOrRangesHaveValueType(that.Value!, that.ValueTypeListElement!.Value)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -5212,7 +5212,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.IdShortsAreUnique(that.Value)))
+                    || Verification.IdShortsAreUnique(that.Value!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5372,7 +5372,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5381,7 +5381,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5391,7 +5391,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5401,7 +5401,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5410,7 +5410,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5420,7 +5420,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5429,7 +5429,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5449,7 +5449,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5458,7 +5458,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5468,7 +5468,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5478,7 +5478,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || (that.Value.Count >= 1)))
+                    || (that.Value!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5488,7 +5488,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.Value != null)
                     || (
-                        that.Value.All(
+                        that.Value!.All(
                             item => item.IdShort != null)
                     )))
                 {
@@ -5502,7 +5502,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.IdShortsAreUnique(that.Value)))
+                    || Verification.IdShortsAreUnique(that.Value!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5631,7 +5631,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5640,7 +5640,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5650,7 +5650,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5660,7 +5660,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5669,7 +5669,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5679,7 +5679,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5688,7 +5688,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5708,7 +5708,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5717,7 +5717,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5727,7 +5727,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5737,7 +5737,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.ValueConsistentWithXsdType(that.Value, that.ValueType)))
+                    || Verification.ValueConsistentWithXsdType(that.Value!, that.ValueType)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5883,7 +5883,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5892,7 +5892,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5902,7 +5902,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5912,7 +5912,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5921,7 +5921,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5931,7 +5931,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5940,7 +5940,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5960,7 +5960,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5969,7 +5969,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5979,7 +5979,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5989,7 +5989,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Value)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Value!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -5998,7 +5998,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Value != null)
-                    || (that.Value.Count >= 1)))
+                    || (that.Value!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6137,7 +6137,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6146,7 +6146,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6156,7 +6156,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6166,7 +6166,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6175,7 +6175,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6185,7 +6185,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6194,7 +6194,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6214,7 +6214,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6223,7 +6223,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6233,7 +6233,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6243,7 +6243,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Max != null)
-                    || Verification.ValueConsistentWithXsdType(that.Max, that.ValueType)))
+                    || Verification.ValueConsistentWithXsdType(that.Max!, that.ValueType)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6252,7 +6252,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Min != null)
-                    || Verification.ValueConsistentWithXsdType(that.Min, that.ValueType)))
+                    || Verification.ValueConsistentWithXsdType(that.Min!, that.ValueType)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6398,7 +6398,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6407,7 +6407,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6417,7 +6417,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6427,7 +6427,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6436,7 +6436,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6446,7 +6446,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6455,7 +6455,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6475,7 +6475,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6484,7 +6484,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6494,7 +6494,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6622,7 +6622,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6631,7 +6631,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6641,7 +6641,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6651,7 +6651,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6660,7 +6660,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6670,7 +6670,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6679,7 +6679,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6699,7 +6699,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6708,7 +6708,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6718,7 +6718,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6858,7 +6858,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6867,7 +6867,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6877,7 +6877,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6887,7 +6887,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6896,7 +6896,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6906,7 +6906,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6915,7 +6915,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6935,7 +6935,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6944,7 +6944,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -6954,7 +6954,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7094,7 +7094,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7103,7 +7103,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7113,7 +7113,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7123,7 +7123,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7132,7 +7132,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7142,7 +7142,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7151,7 +7151,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7171,7 +7171,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7180,7 +7180,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7190,7 +7190,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7200,7 +7200,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Annotations != null)
-                    || (that.Annotations.Count >= 1)))
+                    || (that.Annotations!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7211,7 +7211,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.Annotations != null)
                     || (
-                        that.Annotations.All(
+                        that.Annotations!.All(
                             item => item.IdShort != null)
                     )))
                 {
@@ -7365,7 +7365,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7374,7 +7374,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7384,7 +7384,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7394,7 +7394,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7403,7 +7403,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7413,7 +7413,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7422,7 +7422,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7442,7 +7442,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7451,7 +7451,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7461,7 +7461,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7471,7 +7471,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Statements != null)
-                    || (that.Statements.Count >= 1)))
+                    || (that.Statements!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7481,7 +7481,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.Statements != null)
                     || (
-                        that.Statements.All(
+                        that.Statements!.All(
                             item => item.IdShort != null)
                     )))
                 {
@@ -7496,7 +7496,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.EntityType != null)
                     || (
-                        !(that.EntityType == EntityType.SelfManagedEntity)
+                        !(that.EntityType! == EntityType.SelfManagedEntity)
                         || (
                             (
                                 (that.GlobalAssetId != null)
@@ -7505,7 +7505,7 @@ namespace AasCore.Aas3_2
                             || (
                                 (that.GlobalAssetId == null)
                                 && (that.SpecificAssetIds != null)
-                                && that.SpecificAssetIds.Count >= 1
+                                && that.SpecificAssetIds!.Count >= 1
                             )
                         )
                     )))
@@ -7519,7 +7519,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SpecificAssetIds != null)
-                    || (that.SpecificAssetIds.Count >= 1)))
+                    || (that.SpecificAssetIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7780,7 +7780,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7789,7 +7789,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7799,7 +7799,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7809,7 +7809,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7818,7 +7818,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7828,7 +7828,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7837,7 +7837,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7857,7 +7857,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7866,7 +7866,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7876,7 +7876,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -7903,7 +7903,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.MessageBroker != null)
-                    || Verification.IsModelReferenceToReferable(that.MessageBroker)))
+                    || Verification.IsModelReferenceToReferable(that.MessageBroker!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8093,7 +8093,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8102,7 +8102,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8112,7 +8112,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8122,7 +8122,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8131,7 +8131,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8141,7 +8141,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8150,7 +8150,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8170,7 +8170,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8179,7 +8179,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8189,7 +8189,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8225,7 +8225,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.InputVariables != null)
-                    || (that.InputVariables.Count >= 1)))
+                    || (that.InputVariables!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8235,7 +8235,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.OutputVariables != null)
-                    || (that.OutputVariables.Count >= 1)))
+                    || (that.OutputVariables!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8245,7 +8245,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.InoutputVariables != null)
-                    || (that.InoutputVariables.Count >= 1)))
+                    || (that.InoutputVariables!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8422,7 +8422,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8431,7 +8431,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8441,7 +8441,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8451,7 +8451,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8460,7 +8460,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8470,7 +8470,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8479,7 +8479,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8499,7 +8499,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8508,7 +8508,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8518,7 +8518,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8636,7 +8636,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8645,7 +8645,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8655,7 +8655,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8665,7 +8665,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8674,7 +8674,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8684,7 +8684,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8693,7 +8693,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8703,7 +8703,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.IsCaseOf != null)
-                    || (that.IsCaseOf.Count >= 1)))
+                    || (that.IsCaseOf!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8713,8 +8713,8 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
                     || (
-                        Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(that.EmbeddedDataSpecifications)
-                        || Verification.DataSpecificationIec61360sHaveValue(that.EmbeddedDataSpecifications)
+                        Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(that.EmbeddedDataSpecifications!)
+                        || Verification.DataSpecificationIec61360sHaveValue(that.EmbeddedDataSpecifications!)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -8728,10 +8728,10 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(
                         (that.Category != null)
-                        && that.Category == "QUALIFIER_TYPE"
+                        && that.Category! == "QUALIFIER_TYPE"
                         && (that.EmbeddedDataSpecifications != null)
                     )
-                    || Verification.DataSpecificationIec61360sHaveDataType(that.EmbeddedDataSpecifications)))
+                    || Verification.DataSpecificationIec61360sHaveDataType(that.EmbeddedDataSpecifications!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8744,10 +8744,10 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(
                         (that.Category != null)
-                        && that.Category == "DOCUMENT"
+                        && that.Category! == "DOCUMENT"
                         && (that.EmbeddedDataSpecifications != null)
                     )
-                    || Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(that.EmbeddedDataSpecifications)))
+                    || Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(that.EmbeddedDataSpecifications!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8760,10 +8760,10 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(
                         (that.Category != null)
-                        && that.Category == "REFERENCE"
+                        && that.Category! == "REFERENCE"
                         && (that.EmbeddedDataSpecifications != null)
                     )
-                    || Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(that.EmbeddedDataSpecifications)))
+                    || Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(that.EmbeddedDataSpecifications!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -8777,12 +8777,12 @@ namespace AasCore.Aas3_2
                     !(
                         (that.Category != null)
                         && (
-                            that.Category == "PROPERTY"
-                            || that.Category == "VALUE"
+                            that.Category! == "PROPERTY"
+                            || that.Category! == "VALUE"
                         )
                         && (that.EmbeddedDataSpecifications != null)
                     )
-                    || Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(that.EmbeddedDataSpecifications)))
+                    || Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(that.EmbeddedDataSpecifications!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9172,7 +9172,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.ConceptDescriptions != null)
-                    || (that.ConceptDescriptions.Count >= 1)))
+                    || (that.ConceptDescriptions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9182,7 +9182,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Submodels != null)
-                    || (that.Submodels.Count >= 1)))
+                    || (that.Submodels!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9191,7 +9191,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.AssetAdministrationShells != null)
-                    || (that.AssetAdministrationShells.Count >= 1)))
+                    || (that.AssetAdministrationShells!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9476,7 +9476,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.PreferredNameQuantity != null)
-                    || (that.PreferredNameQuantity.Count >= 1)))
+                    || (that.PreferredNameQuantity!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9486,7 +9486,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.PreferredNameQuantity != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.PreferredNameQuantity)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.PreferredNameQuantity!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9495,7 +9495,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Definition != null)
-                    || (that.Definition.Count >= 1)))
+                    || (that.Definition!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9504,7 +9504,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Definition != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Definition)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Definition!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9633,7 +9633,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(
                         (that.DataType != null)
-                        && Our.Constants.Iec61360DataTypesWithUnit.Contains(that.DataType.Value)
+                        && Our.Constants.Iec61360DataTypesWithUnit.Contains(that.DataType!.Value)
                     )
                     || (
                         (that.Unit != null)
@@ -9649,7 +9649,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Definition != null)
-                    || (that.Definition.Count >= 1)))
+                    || (that.Definition!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9658,7 +9658,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Definition != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Definition)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Definition!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9667,7 +9667,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.ShortName != null)
-                    || (that.ShortName.Count >= 1)))
+                    || (that.ShortName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9676,7 +9676,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.ShortName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.ShortName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.ShortName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9851,7 +9851,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9861,7 +9861,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9870,7 +9870,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9880,7 +9880,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9889,7 +9889,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9898,7 +9898,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9907,7 +9907,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Endpoints != null)
-                    || (that.Endpoints.Count >= 1)))
+                    || (that.Endpoints!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9916,7 +9916,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SpecificAssetIds != null)
-                    || (that.SpecificAssetIds.Count >= 1)))
+                    || (that.SpecificAssetIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -9926,7 +9926,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SubmodelDescriptors != null)
-                    || (that.SubmodelDescriptors.Count >= 1)))
+                    || (that.SubmodelDescriptors!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10075,7 +10075,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10085,7 +10085,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10094,7 +10094,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10104,7 +10104,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10113,7 +10113,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10122,7 +10122,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10131,7 +10131,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10278,7 +10278,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.EndpointProtocolVersion != null)
-                    || (that.EndpointProtocolVersion.Count >= 1)))
+                    || (that.EndpointProtocolVersion!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10288,7 +10288,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SecurityAttributes != null)
-                    || (that.SecurityAttributes.Count >= 1)))
+                    || (that.SecurityAttributes!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10438,7 +10438,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.SpecificAssetIds != null)
-                    || (that.SpecificAssetIds.Count >= 1)))
+                    || (that.SpecificAssetIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10526,7 +10526,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10595,7 +10595,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Messages != null)
-                    || (that.Messages.Count >= 1)))
+                    || (that.Messages!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10669,7 +10669,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.InoutputArguments != null)
-                    || (that.InoutputArguments.Count >= 1)))
+                    || (that.InoutputArguments!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10679,7 +10679,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.InputArguments != null)
-                    || (that.InputArguments.Count >= 1)))
+                    || (that.InputArguments!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10731,7 +10731,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.InoutputArguments != null)
-                    || (that.InoutputArguments.Count >= 1)))
+                    || (that.InoutputArguments!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10741,7 +10741,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.InputArguments != null)
-                    || (that.InputArguments.Count >= 1)))
+                    || (that.InputArguments!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10919,7 +10919,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Messages != null)
-                    || (that.Messages.Count >= 1)))
+                    || (that.Messages!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10955,7 +10955,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.InoutputArguments != null)
-                    || (that.InoutputArguments.Count >= 1)))
+                    || (that.InoutputArguments!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10965,7 +10965,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.OutputArguments != null)
-                    || (that.OutputArguments.Count >= 1)))
+                    || (that.OutputArguments!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -10975,7 +10975,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Messages != null)
-                    || (that.Messages.Count >= 1)))
+                    || (that.Messages!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11035,7 +11035,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Messages != null)
-                    || (that.Messages.Count >= 1)))
+                    || (that.Messages!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11132,7 +11132,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11175,7 +11175,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.AasIds != null)
-                    || (that.AasIds.Count >= 1)))
+                    || (that.AasIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11209,7 +11209,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11218,7 +11218,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11228,7 +11228,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11238,7 +11238,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11247,7 +11247,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11257,7 +11257,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11266,7 +11266,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11286,7 +11286,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11295,7 +11295,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11305,7 +11305,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11432,7 +11432,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11441,7 +11441,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11451,7 +11451,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11461,7 +11461,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11470,7 +11470,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11480,7 +11480,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11489,7 +11489,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11509,7 +11509,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11518,7 +11518,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11528,7 +11528,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11655,7 +11655,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11664,7 +11664,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11674,7 +11674,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11684,7 +11684,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11693,7 +11693,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11703,7 +11703,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11712,7 +11712,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11732,7 +11732,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11741,7 +11741,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11751,7 +11751,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11869,7 +11869,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11878,7 +11878,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11888,7 +11888,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11898,7 +11898,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11907,7 +11907,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11917,7 +11917,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11926,7 +11926,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11946,7 +11946,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11955,7 +11955,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -11965,7 +11965,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12083,7 +12083,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12092,7 +12092,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12102,7 +12102,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12112,7 +12112,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12121,7 +12121,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12131,7 +12131,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12140,7 +12140,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12160,7 +12160,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12169,7 +12169,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12179,7 +12179,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12297,7 +12297,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12306,7 +12306,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12316,7 +12316,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12326,7 +12326,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12335,7 +12335,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12345,7 +12345,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12354,7 +12354,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12374,7 +12374,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12383,7 +12383,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12393,7 +12393,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12511,7 +12511,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12520,7 +12520,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12530,7 +12530,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12540,7 +12540,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12549,7 +12549,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12559,7 +12559,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12568,7 +12568,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12588,7 +12588,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12597,7 +12597,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12607,7 +12607,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12725,7 +12725,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12734,7 +12734,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12744,7 +12744,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12754,7 +12754,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12763,7 +12763,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12773,7 +12773,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12782,7 +12782,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12802,7 +12802,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12811,7 +12811,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12821,7 +12821,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12939,7 +12939,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12948,7 +12948,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12958,7 +12958,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12968,7 +12968,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12977,7 +12977,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12987,7 +12987,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -12996,7 +12996,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13016,7 +13016,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13025,7 +13025,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13035,7 +13035,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13153,7 +13153,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13162,7 +13162,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13172,7 +13172,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13182,7 +13182,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13191,7 +13191,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13201,7 +13201,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13210,7 +13210,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13230,7 +13230,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13239,7 +13239,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13249,7 +13249,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13367,7 +13367,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13376,7 +13376,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13386,7 +13386,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13396,7 +13396,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13405,7 +13405,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13415,7 +13415,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13424,7 +13424,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13444,7 +13444,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13453,7 +13453,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13463,7 +13463,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13581,7 +13581,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13590,7 +13590,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13600,7 +13600,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13610,7 +13610,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13619,7 +13619,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13629,7 +13629,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13638,7 +13638,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13658,7 +13658,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13667,7 +13667,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13677,7 +13677,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13795,7 +13795,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13804,7 +13804,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13814,7 +13814,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13824,7 +13824,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13833,7 +13833,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13843,7 +13843,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13852,7 +13852,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13872,7 +13872,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13881,7 +13881,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -13891,7 +13891,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14075,7 +14075,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14084,7 +14084,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14094,7 +14094,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14104,7 +14104,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14113,7 +14113,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14123,7 +14123,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14132,7 +14132,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14152,7 +14152,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14161,7 +14161,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14171,7 +14171,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14320,7 +14320,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14329,7 +14329,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14339,7 +14339,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14349,7 +14349,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14358,7 +14358,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14368,7 +14368,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14377,7 +14377,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.SupplementalSemanticIds != null)
-                    || (that.SupplementalSemanticIds.Count >= 1)))
+                    || (that.SupplementalSemanticIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14397,7 +14397,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || (that.Qualifiers.Count >= 1)))
+                    || (that.Qualifiers!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14406,7 +14406,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Qualifiers != null)
-                    || Verification.QualifierTypesAreUnique(that.Qualifiers)))
+                    || Verification.QualifierTypesAreUnique(that.Qualifiers!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14416,7 +14416,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14428,7 +14428,7 @@ namespace AasCore.Aas3_2
                     !(that.Qualifiers != null)
                     || (
                         !(
-                            that.Qualifiers.Any(
+                            that.Qualifiers!.Any(
                                 qualifier => qualifier.KindOrDefault() == QualifierKind.TemplateQualifier)
                         )
                         || (that.KindOrDefault() == ModellingKind.Template)
@@ -14581,7 +14581,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Extensions != null)
-                    || (that.Extensions.Count >= 1)))
+                    || (that.Extensions!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14590,7 +14590,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Extensions != null)
-                    || Verification.ExtensionNamesAreUnique(that.Extensions)))
+                    || Verification.ExtensionNamesAreUnique(that.Extensions!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14600,7 +14600,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || (that.Description.Count >= 1)))
+                    || (that.Description!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14610,7 +14610,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Description != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14619,7 +14619,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || (that.DisplayName.Count >= 1)))
+                    || (that.DisplayName!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14629,7 +14629,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.DisplayName != null)
-                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName!)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14638,7 +14638,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
-                    || (that.EmbeddedDataSpecifications.Count >= 1)))
+                    || (that.EmbeddedDataSpecifications!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -14940,7 +14940,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.SpecificAssetIds != null)
-                    || (that.SpecificAssetIds.Count >= 1)))
+                    || (that.SpecificAssetIds!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15016,7 +15016,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15050,7 +15050,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15084,7 +15084,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15118,7 +15118,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15152,7 +15152,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15186,7 +15186,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15220,7 +15220,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15254,7 +15254,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15288,7 +15288,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15322,7 +15322,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15356,7 +15356,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15391,7 +15391,7 @@ namespace AasCore.Aas3_2
                 if (!(
                     !(that.Result != null)
                     || (
-                        that.Result.All(
+                        that.Result!.All(
                             item => item.IdShort != null)
                     )))
                 {
@@ -15405,7 +15405,7 @@ namespace AasCore.Aas3_2
 
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15476,7 +15476,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15510,7 +15510,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15544,7 +15544,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Result != null)
-                    || (that.Result.Count >= 1)))
+                    || (that.Result!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -15793,7 +15793,7 @@ namespace AasCore.Aas3_2
                 Our.IHexCast that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.HexCast_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$hexCast"));
@@ -15819,7 +15819,7 @@ namespace AasCore.Aas3_2
                 Our.IDateTimeCast that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.DateTimeCast_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$dateTimeCast"));
@@ -15832,7 +15832,7 @@ namespace AasCore.Aas3_2
                 Our.ITimeCast that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.TimeCast_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$timeCast"));
@@ -15845,7 +15845,7 @@ namespace AasCore.Aas3_2
                 Our.IDayOfWeek that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.DayOfWeek_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$dayOfWeek"));
@@ -15858,7 +15858,7 @@ namespace AasCore.Aas3_2
                 Our.IDayOfMonth that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.DayOfMonth_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$dayOfMonth"));
@@ -15871,7 +15871,7 @@ namespace AasCore.Aas3_2
                 Our.IMonth that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.Month_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$month"));
@@ -15884,7 +15884,7 @@ namespace AasCore.Aas3_2
                 Our.IYear that
             )
             {
-                foreach (var error in Verification.Verify(that.Value))
+                foreach (var error in Verification.Verify(that.Year_))
                 {
                     error.PrependSegment(
                         new Reporting.NameSegment("$year"));
@@ -16211,7 +16211,7 @@ namespace AasCore.Aas3_2
             {
                 if (!(
                     !(that.Filters != null)
-                    || (that.Filters.Count >= 1)))
+                    || (that.Filters!.Count >= 1)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
@@ -16268,7 +16268,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyXmlSerializableString(
+        public static IEnumerable<Reporting.Error> VerifyXmlSerializableString (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16284,7 +16284,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyNonEmptyXmlSerializableString(
+        public static IEnumerable<Reporting.Error> VerifyNonEmptyXmlSerializableString (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16307,7 +16307,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyDateTimeUtc(
+        public static IEnumerable<Reporting.Error> VerifyDateTimeUtc (
             string that)
         {
             if (!Verification.MatchesXsDateTimeUtc(that))
@@ -16330,7 +16330,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyDateTime(
+        public static IEnumerable<Reporting.Error> VerifyDateTime (
             string that)
         {
             if (!Verification.MatchesXsDateTime(that))
@@ -16351,7 +16351,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyDuration(
+        public static IEnumerable<Reporting.Error> VerifyDuration (
             string that)
         {
             if (!Verification.MatchesXsDuration(that))
@@ -16365,7 +16365,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyBlobType(
+        public static IEnumerable<Reporting.Error> VerifyBlobType (
             byte[] that)
         {
             // There is no verification specified.
@@ -16375,7 +16375,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyIdentifier(
+        public static IEnumerable<Reporting.Error> VerifyIdentifier (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16405,7 +16405,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyValueTypeIec61360(
+        public static IEnumerable<Reporting.Error> VerifyValueTypeIec61360 (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16436,7 +16436,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyNameType(
+        public static IEnumerable<Reporting.Error> VerifyNameType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16466,7 +16466,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyVersionType(
+        public static IEnumerable<Reporting.Error> VerifyVersionType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16503,7 +16503,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyRevisionType(
+        public static IEnumerable<Reporting.Error> VerifyRevisionType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16540,7 +16540,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyLabelType(
+        public static IEnumerable<Reporting.Error> VerifyLabelType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16570,7 +16570,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyMessageTopicType(
+        public static IEnumerable<Reporting.Error> VerifyMessageTopicType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16601,7 +16601,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyBcp47LanguageTag(
+        public static IEnumerable<Reporting.Error> VerifyBcp47LanguageTag (
             string that)
         {
             if (!Verification.MatchesBcp47(that))
@@ -16616,7 +16616,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyContentType(
+        public static IEnumerable<Reporting.Error> VerifyContentType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16654,7 +16654,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyPathType(
+        public static IEnumerable<Reporting.Error> VerifyPathType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16692,7 +16692,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyQualifierType(
+        public static IEnumerable<Reporting.Error> VerifyQualifierType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16722,7 +16722,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyValueDataType(
+        public static IEnumerable<Reporting.Error> VerifyValueDataType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16738,7 +16738,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyIdShortType(
+        public static IEnumerable<Reporting.Error> VerifyIdShortType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16933,7 +16933,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyStringUom(
+        public static IEnumerable<Reporting.Error> VerifyStringUom (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -16963,7 +16963,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyIdentifierUom(
+        public static IEnumerable<Reporting.Error> VerifyIdentifierUom (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -17036,7 +17036,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyNonNegativeInteger(
+        public static IEnumerable<Reporting.Error> VerifyNonNegativeInteger (
             long that)
         {
             if (!(that >= 0))
@@ -17050,7 +17050,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyCodeType(
+        public static IEnumerable<Reporting.Error> VerifyCodeType (
             string that)
         {
             if (!(Common.StringHelpers.Len(that) <= 32))
@@ -17071,7 +17071,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyShortIdType(
+        public static IEnumerable<Reporting.Error> VerifyShortIdType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -17101,7 +17101,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyLocatorType(
+        public static IEnumerable<Reporting.Error> VerifyLocatorType (
             string that)
         {
             if (!(Common.StringHelpers.Len(that) <= 2048))
@@ -17122,7 +17122,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyTextType(
+        public static IEnumerable<Reporting.Error> VerifyTextType (
             string that)
         {
             if (!(Common.StringHelpers.Len(that) <= 2048))
@@ -17143,7 +17143,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifySchemeType(
+        public static IEnumerable<Reporting.Error> VerifySchemeType (
             string that)
         {
             if (!Verification.MatchesXmlSerializableString(that))
@@ -17257,7 +17257,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyPathItem(
+        public static IEnumerable<Reporting.Error> VerifyPathItem (
             string that)
         {
             if (!Verification.MatchesPathItem(that))
@@ -17271,7 +17271,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyFieldIdentifier(
+        public static IEnumerable<Reporting.Error> VerifyFieldIdentifier (
             string that)
         {
             if (!Verification.MatchesFieldIdentifier(that))
@@ -17285,7 +17285,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyFragmentFieldIdentifier(
+        public static IEnumerable<Reporting.Error> VerifyFragmentFieldIdentifier (
             string that)
         {
             if (!Verification.MatchesFragmentFieldIdentifier(that))
@@ -17300,7 +17300,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyStandardString(
+        public static IEnumerable<Reporting.Error> VerifyStandardString (
             string that)
         {
             if (!(Common.StringHelpers.Len(that) >= 1))
@@ -17314,7 +17314,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyHexLiteralType(
+        public static IEnumerable<Reporting.Error> VerifyHexLiteralType (
             string that)
         {
             if (!Verification.MatchesHexLiteral(that))
@@ -17328,7 +17328,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyDateTimeLiteralType(
+        public static IEnumerable<Reporting.Error> VerifyDateTimeLiteralType (
             string that)
         {
             if (!Verification.MatchesDateTimeLiteral(that))
@@ -17342,7 +17342,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyTimeLiteralType(
+        public static IEnumerable<Reporting.Error> VerifyTimeLiteralType (
             string that)
         {
             if (!Verification.MatchesTimeLiteral(that))
@@ -17356,7 +17356,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyReferenceIdentifier(
+        public static IEnumerable<Reporting.Error> VerifyReferenceIdentifier (
             string that)
         {
             if (!Verification.MatchesReferenceIdentifier(that))

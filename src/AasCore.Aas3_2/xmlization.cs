@@ -20373,7 +20373,7 @@ namespace AasCore.Aas3_2
                 if (theHexCast == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property HexCast_ has not been given " +
                         "in the XML representation of an instance of class HexCast");
                     return default!;
                 }
@@ -20567,7 +20567,7 @@ namespace AasCore.Aas3_2
                 if (theDateTimeCast == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property DateTimeCast_ has not been given " +
                         "in the XML representation of an instance of class DateTimeCast");
                     return default!;
                 }
@@ -20664,7 +20664,7 @@ namespace AasCore.Aas3_2
                 if (theTimeCast == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property TimeCast_ has not been given " +
                         "in the XML representation of an instance of class TimeCast");
                     return default!;
                 }
@@ -20761,7 +20761,7 @@ namespace AasCore.Aas3_2
                 if (theDayOfWeek == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property DayOfWeek_ has not been given " +
                         "in the XML representation of an instance of class DayOfWeek");
                     return default!;
                 }
@@ -20858,7 +20858,7 @@ namespace AasCore.Aas3_2
                 if (theDayOfMonth == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property DayOfMonth_ has not been given " +
                         "in the XML representation of an instance of class DayOfMonth");
                     return default!;
                 }
@@ -20955,7 +20955,7 @@ namespace AasCore.Aas3_2
                 if (theMonth == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property Month_ has not been given " +
                         "in the XML representation of an instance of class Month");
                     return default!;
                 }
@@ -21052,7 +21052,7 @@ namespace AasCore.Aas3_2
                 if (theYear == null)
                 {
                     error = new Reporting.Error(
-                        "The required property Value has not been given " +
+                        "The required property Year_ has not been given " +
                         "in the XML representation of an instance of class Year");
                     return default!;
                 }
@@ -22772,35 +22772,35 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "claimAttribute":
+                    {
+                        Our.ClaimAttribute instance = ClaimAttributeFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.ClaimAttribute instance = ClaimAttributeFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.AttributeItem.FromClaimAttribute(instance);
+                            return default!;
                         }
+                        return Our.AttributeItem.FromClaimAttribute(instance);
+                    }
                     case "globalAttribute":
+                    {
+                        Our.GlobalAttribute instance = GlobalAttributeFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.GlobalAttribute instance = GlobalAttributeFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.AttributeItem.FromGlobalAttribute(instance);
+                            return default!;
                         }
+                        return Our.AttributeItem.FromGlobalAttribute(instance);
+                    }
                     case "referenceAttribute":
+                    {
+                        Our.ReferenceAttribute instance = ReferenceAttributeFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.ReferenceAttribute instance = ReferenceAttributeFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.AttributeItem.FromReferenceAttribute(instance);
+                            return default!;
                         }
+                        return Our.AttributeItem.FromReferenceAttribute(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -22825,45 +22825,45 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "fieldOperand":
+                    {
+                        Our.FieldOperand instance = FieldOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.FieldOperand instance = FieldOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.StringValue.FromFieldOperand(instance);
+                            return default!;
                         }
+                        return Our.StringValue.FromFieldOperand(instance);
+                    }
                     case "stringLiteral":
+                    {
+                        Our.StringLiteral instance = StringLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StringLiteral instance = StringLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.StringValue.FromStringLiteral(instance);
+                            return default!;
                         }
+                        return Our.StringValue.FromStringLiteral(instance);
+                    }
                     case "stringCast":
+                    {
+                        Our.StringCast instance = StringCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StringCast instance = StringCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.StringValue.FromStringCast(instance);
+                            return default!;
                         }
+                        return Our.StringValue.FromStringCast(instance);
+                    }
                     case "attributeOperand":
+                    {
+                        Our.AttributeOperand instance = AttributeOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.AttributeOperand instance = AttributeOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.StringValue.FromAttributeOperand(instance);
+                            return default!;
                         }
+                        return Our.StringValue.FromAttributeOperand(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -22888,35 +22888,35 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "dateTimeLiteral":
+                    {
+                        Our.DateTimeLiteral instance = DateTimeLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeLiteral instance = DateTimeLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.DateTimeOperand.FromDateTimeLiteral(instance);
+                            return default!;
                         }
+                        return Our.DateTimeOperand.FromDateTimeLiteral(instance);
+                    }
                     case "dateTimeCast":
+                    {
+                        Our.DateTimeCast instance = DateTimeCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeCast instance = DateTimeCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.DateTimeOperand.FromDateTimeCast(instance);
+                            return default!;
                         }
+                        return Our.DateTimeOperand.FromDateTimeCast(instance);
+                    }
                     case "dateTimeAttributeOperand":
+                    {
+                        Our.DateTimeAttributeOperand instance = DateTimeAttributeOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeAttributeOperand instance = DateTimeAttributeOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.DateTimeOperand.FromDateTimeAttributeOperand(instance);
+                            return default!;
                         }
+                        return Our.DateTimeOperand.FromDateTimeAttributeOperand(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -22941,65 +22941,65 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "fieldOperand":
+                    {
+                        Our.FieldOperand instance = FieldOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.FieldOperand instance = FieldOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeCastOperand.FromFieldOperand(instance);
+                            return default!;
                         }
+                        return Our.TimeCastOperand.FromFieldOperand(instance);
+                    }
                     case "stringLiteral":
+                    {
+                        Our.StringLiteral instance = StringLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StringLiteral instance = StringLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeCastOperand.FromStringLiteral(instance);
+                            return default!;
                         }
+                        return Our.TimeCastOperand.FromStringLiteral(instance);
+                    }
                     case "stringCast":
+                    {
+                        Our.StringCast instance = StringCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StringCast instance = StringCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeCastOperand.FromStringCast(instance);
+                            return default!;
                         }
+                        return Our.TimeCastOperand.FromStringCast(instance);
+                    }
                     case "attributeOperand":
+                    {
+                        Our.AttributeOperand instance = AttributeOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.AttributeOperand instance = AttributeOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeCastOperand.FromAttributeOperand(instance);
+                            return default!;
                         }
+                        return Our.TimeCastOperand.FromAttributeOperand(instance);
+                    }
                     case "dateTimeLiteral":
+                    {
+                        Our.DateTimeLiteral instance = DateTimeLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeLiteral instance = DateTimeLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeCastOperand.FromDateTimeLiteral(instance);
+                            return default!;
                         }
+                        return Our.TimeCastOperand.FromDateTimeLiteral(instance);
+                    }
                     case "dateTimeCast":
+                    {
+                        Our.DateTimeCast instance = DateTimeCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeCast instance = DateTimeCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeCastOperand.FromDateTimeCast(instance);
+                            return default!;
                         }
+                        return Our.TimeCastOperand.FromDateTimeCast(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23024,65 +23024,65 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "numberLiteral":
+                    {
+                        Our.NumberLiteral instance = NumberLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NumberLiteral instance = NumberLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.NumericalOperand.FromNumberLiteral(instance);
+                            return default!;
                         }
+                        return Our.NumericalOperand.FromNumberLiteral(instance);
+                    }
                     case "numberCast":
+                    {
+                        Our.NumberCast instance = NumberCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NumberCast instance = NumberCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.NumericalOperand.FromNumberCast(instance);
+                            return default!;
                         }
+                        return Our.NumericalOperand.FromNumberCast(instance);
+                    }
                     case "dayOfWeek":
+                    {
+                        Our.DayOfWeek instance = DayOfWeekFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DayOfWeek instance = DayOfWeekFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.NumericalOperand.FromDayOfWeek(instance);
+                            return default!;
                         }
+                        return Our.NumericalOperand.FromDayOfWeek(instance);
+                    }
                     case "dayOfMonth":
+                    {
+                        Our.DayOfMonth instance = DayOfMonthFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DayOfMonth instance = DayOfMonthFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.NumericalOperand.FromDayOfMonth(instance);
+                            return default!;
                         }
+                        return Our.NumericalOperand.FromDayOfMonth(instance);
+                    }
                     case "month":
+                    {
+                        Our.Month instance = MonthFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.Month instance = MonthFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.NumericalOperand.FromMonth(instance);
+                            return default!;
                         }
+                        return Our.NumericalOperand.FromMonth(instance);
+                    }
                     case "year":
+                    {
+                        Our.Year instance = YearFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.Year instance = YearFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.NumericalOperand.FromYear(instance);
+                            return default!;
                         }
+                        return Our.NumericalOperand.FromYear(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23107,25 +23107,25 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "hexLiteral":
+                    {
+                        Our.HexLiteral instance = HexLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.HexLiteral instance = HexLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.HexOperand.FromHexLiteral(instance);
+                            return default!;
                         }
+                        return Our.HexOperand.FromHexLiteral(instance);
+                    }
                     case "hexCast":
+                    {
+                        Our.HexCast instance = HexCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.HexCast instance = HexCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.HexOperand.FromHexCast(instance);
+                            return default!;
                         }
+                        return Our.HexOperand.FromHexCast(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23150,25 +23150,25 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "booleanLiteral":
+                    {
+                        Our.BooleanLiteral instance = BooleanLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.BooleanLiteral instance = BooleanLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.BoolOperand.FromBooleanLiteral(instance);
+                            return default!;
                         }
+                        return Our.BoolOperand.FromBooleanLiteral(instance);
+                    }
                     case "booleanCast":
+                    {
+                        Our.BooleanCast instance = BooleanCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.BooleanCast instance = BooleanCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.BoolOperand.FromBooleanCast(instance);
+                            return default!;
                         }
+                        return Our.BoolOperand.FromBooleanCast(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23193,25 +23193,25 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "timeLiteral":
+                    {
+                        Our.TimeLiteral instance = TimeLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.TimeLiteral instance = TimeLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeOperand.FromTimeLiteral(instance);
+                            return default!;
                         }
+                        return Our.TimeOperand.FromTimeLiteral(instance);
+                    }
                     case "timeCast":
+                    {
+                        Our.TimeCast instance = TimeCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.TimeCast instance = TimeCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.TimeOperand.FromTimeCast(instance);
+                            return default!;
                         }
+                        return Our.TimeOperand.FromTimeCast(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23236,185 +23236,185 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "fieldOperand":
+                    {
+                        Our.FieldOperand instance = FieldOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.FieldOperand instance = FieldOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromFieldOperand(instance);
+                            return default!;
                         }
+                        return Our.Value.FromFieldOperand(instance);
+                    }
                     case "stringLiteral":
+                    {
+                        Our.StringLiteral instance = StringLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StringLiteral instance = StringLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromStringLiteral(instance);
+                            return default!;
                         }
+                        return Our.Value.FromStringLiteral(instance);
+                    }
                     case "stringCast":
+                    {
+                        Our.StringCast instance = StringCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StringCast instance = StringCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromStringCast(instance);
+                            return default!;
                         }
+                        return Our.Value.FromStringCast(instance);
+                    }
                     case "attributeOperand":
+                    {
+                        Our.AttributeOperand instance = AttributeOperandFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.AttributeOperand instance = AttributeOperandFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromAttributeOperand(instance);
+                            return default!;
                         }
+                        return Our.Value.FromAttributeOperand(instance);
+                    }
                     case "numberLiteral":
+                    {
+                        Our.NumberLiteral instance = NumberLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NumberLiteral instance = NumberLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromNumberLiteral(instance);
+                            return default!;
                         }
+                        return Our.Value.FromNumberLiteral(instance);
+                    }
                     case "numberCast":
+                    {
+                        Our.NumberCast instance = NumberCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NumberCast instance = NumberCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromNumberCast(instance);
+                            return default!;
                         }
+                        return Our.Value.FromNumberCast(instance);
+                    }
                     case "dayOfWeek":
+                    {
+                        Our.DayOfWeek instance = DayOfWeekFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DayOfWeek instance = DayOfWeekFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromDayOfWeek(instance);
+                            return default!;
                         }
+                        return Our.Value.FromDayOfWeek(instance);
+                    }
                     case "dayOfMonth":
+                    {
+                        Our.DayOfMonth instance = DayOfMonthFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DayOfMonth instance = DayOfMonthFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromDayOfMonth(instance);
+                            return default!;
                         }
+                        return Our.Value.FromDayOfMonth(instance);
+                    }
                     case "month":
+                    {
+                        Our.Month instance = MonthFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.Month instance = MonthFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromMonth(instance);
+                            return default!;
                         }
+                        return Our.Value.FromMonth(instance);
+                    }
                     case "year":
+                    {
+                        Our.Year instance = YearFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.Year instance = YearFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromYear(instance);
+                            return default!;
                         }
+                        return Our.Value.FromYear(instance);
+                    }
                     case "hexLiteral":
+                    {
+                        Our.HexLiteral instance = HexLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.HexLiteral instance = HexLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromHexLiteral(instance);
+                            return default!;
                         }
+                        return Our.Value.FromHexLiteral(instance);
+                    }
                     case "hexCast":
+                    {
+                        Our.HexCast instance = HexCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.HexCast instance = HexCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromHexCast(instance);
+                            return default!;
                         }
+                        return Our.Value.FromHexCast(instance);
+                    }
                     case "booleanLiteral":
+                    {
+                        Our.BooleanLiteral instance = BooleanLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.BooleanLiteral instance = BooleanLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromBooleanLiteral(instance);
+                            return default!;
                         }
+                        return Our.Value.FromBooleanLiteral(instance);
+                    }
                     case "booleanCast":
+                    {
+                        Our.BooleanCast instance = BooleanCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.BooleanCast instance = BooleanCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromBooleanCast(instance);
+                            return default!;
                         }
+                        return Our.Value.FromBooleanCast(instance);
+                    }
                     case "dateTimeLiteral":
+                    {
+                        Our.DateTimeLiteral instance = DateTimeLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeLiteral instance = DateTimeLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromDateTimeLiteral(instance);
+                            return default!;
                         }
+                        return Our.Value.FromDateTimeLiteral(instance);
+                    }
                     case "dateTimeCast":
+                    {
+                        Our.DateTimeCast instance = DateTimeCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.DateTimeCast instance = DateTimeCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromDateTimeCast(instance);
+                            return default!;
                         }
+                        return Our.Value.FromDateTimeCast(instance);
+                    }
                     case "timeLiteral":
+                    {
+                        Our.TimeLiteral instance = TimeLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.TimeLiteral instance = TimeLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromTimeLiteral(instance);
+                            return default!;
                         }
+                        return Our.Value.FromTimeLiteral(instance);
+                    }
                     case "timeCast":
+                    {
+                        Our.TimeCast instance = TimeCastFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.TimeCast instance = TimeCastFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.Value.FromTimeCast(instance);
+                            return default!;
                         }
+                        return Our.Value.FromTimeCast(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23439,115 +23439,115 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "matchClause":
+                    {
+                        Our.MatchClause instance = MatchClauseFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.MatchClause instance = MatchClauseFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromMatchClause(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromMatchClause(instance);
+                    }
                     case "equalComparison":
+                    {
+                        Our.EqualComparison instance = EqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.EqualComparison instance = EqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromEqualComparison(instance);
+                    }
                     case "notEqualComparison":
+                    {
+                        Our.NotEqualComparison instance = NotEqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NotEqualComparison instance = NotEqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromNotEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromNotEqualComparison(instance);
+                    }
                     case "greaterThanComparison":
+                    {
+                        Our.GreaterThanComparison instance = GreaterThanComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.GreaterThanComparison instance = GreaterThanComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromGreaterThanComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromGreaterThanComparison(instance);
+                    }
                     case "greaterThanOrEqualComparison":
+                    {
+                        Our.GreaterThanOrEqualComparison instance = GreaterThanOrEqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.GreaterThanOrEqualComparison instance = GreaterThanOrEqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromGreaterThanOrEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromGreaterThanOrEqualComparison(instance);
+                    }
                     case "lessThanComparison":
+                    {
+                        Our.LessThanComparison instance = LessThanComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.LessThanComparison instance = LessThanComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromLessThanComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromLessThanComparison(instance);
+                    }
                     case "lessThanOrEqualComparison":
+                    {
+                        Our.LessThanOrEqualComparison instance = LessThanOrEqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.LessThanOrEqualComparison instance = LessThanOrEqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromLessThanOrEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromLessThanOrEqualComparison(instance);
+                    }
                     case "containsComparison":
+                    {
+                        Our.ContainsComparison instance = ContainsComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.ContainsComparison instance = ContainsComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromContainsComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromContainsComparison(instance);
+                    }
                     case "startsWithComparison":
+                    {
+                        Our.StartsWithComparison instance = StartsWithComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StartsWithComparison instance = StartsWithComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromStartsWithComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromStartsWithComparison(instance);
+                    }
                     case "endsWithComparison":
+                    {
+                        Our.EndsWithComparison instance = EndsWithComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.EndsWithComparison instance = EndsWithComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromEndsWithComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromEndsWithComparison(instance);
+                    }
                     case "regexComparison":
+                    {
+                        Our.RegexComparison instance = RegexComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.RegexComparison instance = RegexComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.MatchExpression.FromRegexComparison(instance);
+                            return default!;
                         }
+                        return Our.MatchExpression.FromRegexComparison(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23572,155 +23572,155 @@ namespace AasCore.Aas3_2
                 switch (elementName)
                 {
                     case "andExpression":
+                    {
+                        Our.AndExpression instance = AndExpressionFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.AndExpression instance = AndExpressionFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromAndExpression(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromAndExpression(instance);
+                    }
                     case "orExpression":
+                    {
+                        Our.OrExpression instance = OrExpressionFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.OrExpression instance = OrExpressionFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromOrExpression(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromOrExpression(instance);
+                    }
                     case "notExpression":
+                    {
+                        Our.NotExpression instance = NotExpressionFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NotExpression instance = NotExpressionFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromNotExpression(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromNotExpression(instance);
+                    }
                     case "booleanLiteral":
+                    {
+                        Our.BooleanLiteral instance = BooleanLiteralFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.BooleanLiteral instance = BooleanLiteralFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromBooleanLiteral(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromBooleanLiteral(instance);
+                    }
                     case "matchClause":
+                    {
+                        Our.MatchClause instance = MatchClauseFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.MatchClause instance = MatchClauseFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromMatchClause(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromMatchClause(instance);
+                    }
                     case "equalComparison":
+                    {
+                        Our.EqualComparison instance = EqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.EqualComparison instance = EqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromEqualComparison(instance);
+                    }
                     case "notEqualComparison":
+                    {
+                        Our.NotEqualComparison instance = NotEqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.NotEqualComparison instance = NotEqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromNotEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromNotEqualComparison(instance);
+                    }
                     case "greaterThanComparison":
+                    {
+                        Our.GreaterThanComparison instance = GreaterThanComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.GreaterThanComparison instance = GreaterThanComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromGreaterThanComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromGreaterThanComparison(instance);
+                    }
                     case "greaterThanOrEqualComparison":
+                    {
+                        Our.GreaterThanOrEqualComparison instance = GreaterThanOrEqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.GreaterThanOrEqualComparison instance = GreaterThanOrEqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromGreaterThanOrEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromGreaterThanOrEqualComparison(instance);
+                    }
                     case "lessThanComparison":
+                    {
+                        Our.LessThanComparison instance = LessThanComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.LessThanComparison instance = LessThanComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromLessThanComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromLessThanComparison(instance);
+                    }
                     case "lessThanOrEqualComparison":
+                    {
+                        Our.LessThanOrEqualComparison instance = LessThanOrEqualComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.LessThanOrEqualComparison instance = LessThanOrEqualComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromLessThanOrEqualComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromLessThanOrEqualComparison(instance);
+                    }
                     case "containsComparison":
+                    {
+                        Our.ContainsComparison instance = ContainsComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.ContainsComparison instance = ContainsComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromContainsComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromContainsComparison(instance);
+                    }
                     case "startsWithComparison":
+                    {
+                        Our.StartsWithComparison instance = StartsWithComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.StartsWithComparison instance = StartsWithComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromStartsWithComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromStartsWithComparison(instance);
+                    }
                     case "endsWithComparison":
+                    {
+                        Our.EndsWithComparison instance = EndsWithComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.EndsWithComparison instance = EndsWithComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromEndsWithComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromEndsWithComparison(instance);
+                    }
                     case "regexComparison":
+                    {
+                        Our.RegexComparison instance = RegexComparisonFromElement(
+                            reader, out error);
+                        if (error != null)
                         {
-                            Our.RegexComparison instance = RegexComparisonFromElement(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return default!;
-                            }
-                            return Our.LogicalExpression.FromRegexComparison(instance);
+                            return default!;
                         }
+                        return Our.LogicalExpression.FromRegexComparison(instance);
+                    }
                     default:
                         error = new Reporting.Error(
                             $"Unexpected element with the name {elementName}");
@@ -23770,8 +23770,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IHasSemantics.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IHasSemantics IHasSemanticsFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IHasSemantics IHasSemanticsFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -23867,8 +23866,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IHasExtensions.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IHasExtensions IHasExtensionsFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IHasExtensions IHasExtensionsFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -23916,8 +23914,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IReferable.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IReferable IReferableFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IReferable IReferableFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -23965,8 +23962,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IIdentifiable.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IIdentifiable IIdentifiableFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IIdentifiable IIdentifiableFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -24014,8 +24010,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IHasKind.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IHasKind IHasKindFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IHasKind IHasKindFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -24063,8 +24058,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IHasDataSpecification.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IHasDataSpecification IHasDataSpecificationFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IHasDataSpecification IHasDataSpecificationFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -24160,8 +24154,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IQualifiable.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IQualifiable IQualifiableFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IQualifiable IQualifiableFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -24497,8 +24490,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of ISubmodelElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.ISubmodelElement ISubmodelElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.ISubmodelElement ISubmodelElementFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -24546,8 +24538,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IRelationshipElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IRelationshipElement IRelationshipElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IRelationshipElement IRelationshipElementFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -24739,8 +24730,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IDataElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IDataElement IDataElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IDataElement IDataElementFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -25220,8 +25210,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IEventElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IEventElement IEventElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IEventElement IEventElementFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -25605,8 +25594,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IAbstractLangString.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IAbstractLangString IAbstractLangStringFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IAbstractLangString IAbstractLangStringFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -25798,8 +25786,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IDataSpecificationContent.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IDataSpecificationContent IDataSpecificationContentFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IDataSpecificationContent IDataSpecificationContentFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -26375,8 +26362,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IDescriptor.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IDescriptor IDescriptorFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IDescriptor IDescriptorFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -26760,8 +26746,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of IRecentChange.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.IRecentChange IRecentChangeFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.IRecentChange IRecentChangeFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -27577,8 +27562,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of ISubmodelElementAttributes.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.ISubmodelElementAttributes ISubmodelElementAttributesFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.ISubmodelElementAttributes ISubmodelElementAttributesFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -27626,8 +27610,7 @@ namespace AasCore.Aas3_2
             /// Thrown when the element is not a valid XML
             /// representation of ISubmodelElementMetadata.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Our.ISubmodelElementMetadata ISubmodelElementMetadataFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Our.ISubmodelElementMetadata ISubmodelElementMetadataFrom(
                 Xml.XmlReader reader)
             {
                 XmlCommon.SkipNoneWhitespaceAndComments(reader);
@@ -32230,33 +32213,25 @@ namespace AasCore.Aas3_2
                 return (that, writer) =>
                 {
                     try
-                    {
-                        {
-                            writeItem0(that.Item1, writer);
-                        }
-                    }
+                    {{
+                        writeItem0(that.Item1, writer);
+                    }}
                     catch (SerializationFailure failure)
-                    {
-                        {
-                            failure.Error.PrependSegment(
-                                new Reporting.IndexSegment(0));
-                            throw;
-                        }
-                    }
+                    {{
+                        failure.Error.PrependSegment(
+                            new Reporting.IndexSegment(0));
+                        throw;
+                    }}
                     try
-                    {
-                        {
-                            writeItem1(that.Item2, writer);
-                        }
-                    }
+                    {{
+                        writeItem1(that.Item2, writer);
+                    }}
                     catch (SerializationFailure failure)
-                    {
-                        {
-                            failure.Error.PrependSegment(
-                                new Reporting.IndexSegment(1));
-                            throw;
-                        }
-                    }
+                    {{
+                        failure.Error.PrependSegment(
+                            new Reporting.IndexSegment(1));
+                        throw;
+                    }}
                 };
             }
 
@@ -39323,7 +39298,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "hexCast", "Value", that.Value, writer, Write_Value);
+                    "hexCast", "HexCast_", that.HexCast_, writer, Write_Value);
             }  // private static void HexCastToSequence
 
             public override void VisitHexCast(
@@ -39365,7 +39340,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "dateTimeCast", "Value", that.Value, writer, Write_StringValue);
+                    "dateTimeCast", "DateTimeCast_", that.DateTimeCast_, writer, Write_StringValue);
             }  // private static void DateTimeCastToSequence
 
             public override void VisitDateTimeCast(
@@ -39386,7 +39361,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "timeCast", "Value", that.Value, writer, Write_TimeCastOperand);
+                    "timeCast", "TimeCast_", that.TimeCast_, writer, Write_TimeCastOperand);
             }  // private static void TimeCastToSequence
 
             public override void VisitTimeCast(
@@ -39407,7 +39382,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "dayOfWeek", "Value", that.Value, writer, Write_DateTimeOperand);
+                    "dayOfWeek", "DayOfWeek_", that.DayOfWeek_, writer, Write_DateTimeOperand);
             }  // private static void DayOfWeekToSequence
 
             public override void VisitDayOfWeek(
@@ -39428,7 +39403,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "dayOfMonth", "Value", that.Value, writer, Write_DateTimeOperand);
+                    "dayOfMonth", "DayOfMonth_", that.DayOfMonth_, writer, Write_DateTimeOperand);
             }  // private static void DayOfMonthToSequence
 
             public override void VisitDayOfMonth(
@@ -39449,7 +39424,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "month", "Value", that.Value, writer, Write_DateTimeOperand);
+                    "month", "Month_", that.Month_, writer, Write_DateTimeOperand);
             }  // private static void MonthToSequence
 
             public override void VisitMonth(
@@ -39470,7 +39445,7 @@ namespace AasCore.Aas3_2
                 Xml.XmlWriter writer)
             {
                 WriteProperty(
-                    "year", "Value", that.Value, writer, Write_DateTimeOperand);
+                    "year", "Year_", that.Year_, writer, Write_DateTimeOperand);
             }  // private static void YearToSequence
 
             public override void VisitYear(

@@ -11051,10 +11051,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public Value Value
+            public Value HexCast_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.HexCast_;
+                set => _instance.HexCast_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -11165,10 +11165,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public StringValue Value
+            public StringValue DateTimeCast_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.DateTimeCast_;
+                set => _instance.DateTimeCast_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -11222,10 +11222,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public TimeCastOperand Value
+            public TimeCastOperand TimeCast_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.TimeCast_;
+                set => _instance.TimeCast_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -11279,10 +11279,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public DateTimeOperand Value
+            public DateTimeOperand DayOfWeek_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.DayOfWeek_;
+                set => _instance.DayOfWeek_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -11336,10 +11336,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public DateTimeOperand Value
+            public DateTimeOperand DayOfMonth_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.DayOfMonth_;
+                set => _instance.DayOfMonth_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -11393,10 +11393,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public DateTimeOperand Value
+            public DateTimeOperand Month_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.Month_;
+                set => _instance.Month_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -11450,10 +11450,10 @@ namespace AasCore.Aas3_2
                 _instance = instance;
             }
 
-            public DateTimeOperand Value
+            public DateTimeOperand Year_
             {
-                get => _instance.Value;
-                set => _instance.Value = value;
+                get => _instance.Year_;
+                set => _instance.Year_ = value;
             }
 
             public IEnumerable<Our.IClass> DescendOnce()
@@ -16647,7 +16647,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.HexCast_ = Wrap(that.HexCast_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)
@@ -16691,7 +16691,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.DateTimeCast_ = Wrap(that.DateTimeCast_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)
@@ -16713,7 +16713,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.TimeCast_ = Wrap(that.TimeCast_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)
@@ -16735,7 +16735,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.DayOfWeek_ = Wrap(that.DayOfWeek_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)
@@ -16757,7 +16757,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.DayOfMonth_ = Wrap(that.DayOfMonth_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)
@@ -16779,7 +16779,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.Month_ = Wrap(that.Month_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)
@@ -16801,7 +16801,7 @@ namespace AasCore.Aas3_2
                     );
                 }
 
-                that.Value = Wrap(that.Value);
+                that.Year_ = Wrap(that.Year_);
 
                 var enhancement = _enhancementFactory(that);
                 return (enhancement == null)

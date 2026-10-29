@@ -241,7 +241,7 @@ namespace AasCore.Aas3_2
         {
             if (this.ValueType != null)
             {
-                return this.ValueType.Value;
+                return this.ValueType!.Value;
             }
             return Our.DataTypeDefXsd.String;
         }
@@ -1060,7 +1060,7 @@ namespace AasCore.Aas3_2
         {
             if (this.Kind != null)
             {
-                return this.Kind.Value;
+                return this.Kind!.Value;
             }
             return Our.QualifierKind.ConceptQualifier;
         }
@@ -2519,7 +2519,7 @@ namespace AasCore.Aas3_2
         {
             if (this.Kind != null)
             {
-                return this.Kind.Value;
+                return this.Kind!.Value;
             }
             return Our.ModellingKind.Instance;
         }
@@ -3679,7 +3679,7 @@ namespace AasCore.Aas3_2
         {
             if (this.OrderRelevant != null)
             {
-                return this.OrderRelevant.Value;
+                return this.OrderRelevant!.Value;
             }
             return true;
         }
@@ -24577,7 +24577,7 @@ namespace AasCore.Aas3_2
         {
             if (this.Kind != null)
             {
-                return this.Kind.Value;
+                return this.Kind!.Value;
             }
             return Our.ModellingKind.Instance;
         }
@@ -30361,7 +30361,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The operand to be cast
         /// </summary>
-        public Value Value { get; set; }
+        public Value HexCast_ { get; set; }
     }
 
     /// <summary>
@@ -30382,7 +30382,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The operand to be cast
         /// </summary>
-        public Value Value { get; set; }
+        public Value HexCast_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -30390,7 +30390,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return HexCast_.Underlying;
         }
 
         /// <summary>
@@ -30398,10 +30398,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return HexCast_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in HexCast_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -30449,7 +30449,7 @@ namespace AasCore.Aas3_2
 
         public HexCast(Value hexCast)
         {
-            Value = hexCast;
+            HexCast_ = hexCast;
         }
     }
 
@@ -30581,7 +30581,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The operand to be cast
         /// </summary>
-        public StringValue Value { get; set; }
+        public StringValue DateTimeCast_ { get; set; }
     }
 
     /// <summary>
@@ -30602,7 +30602,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The operand to be cast
         /// </summary>
-        public StringValue Value { get; set; }
+        public StringValue DateTimeCast_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -30610,7 +30610,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return DateTimeCast_.Underlying;
         }
 
         /// <summary>
@@ -30618,10 +30618,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return DateTimeCast_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in DateTimeCast_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -30669,7 +30669,7 @@ namespace AasCore.Aas3_2
 
         public DateTimeCast(StringValue dateTimeCast)
         {
-            Value = dateTimeCast;
+            DateTimeCast_ = dateTimeCast;
         }
     }
 
@@ -30691,7 +30691,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The operand to be cast
         /// </summary>
-        public TimeCastOperand Value { get; set; }
+        public TimeCastOperand TimeCast_ { get; set; }
     }
 
     /// <summary>
@@ -30712,7 +30712,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The operand to be cast
         /// </summary>
-        public TimeCastOperand Value { get; set; }
+        public TimeCastOperand TimeCast_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -30720,7 +30720,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return TimeCast_.Underlying;
         }
 
         /// <summary>
@@ -30728,10 +30728,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return TimeCast_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in TimeCast_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -30779,7 +30779,7 @@ namespace AasCore.Aas3_2
 
         public TimeCast(TimeCastOperand timeCast)
         {
-            Value = timeCast;
+            TimeCast_ = timeCast;
         }
     }
 
@@ -30795,7 +30795,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand DayOfWeek_ { get; set; }
     }
 
     /// <summary>
@@ -30810,7 +30810,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand DayOfWeek_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -30818,7 +30818,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return DayOfWeek_.Underlying;
         }
 
         /// <summary>
@@ -30826,10 +30826,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return DayOfWeek_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in DayOfWeek_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -30877,7 +30877,7 @@ namespace AasCore.Aas3_2
 
         public DayOfWeek(DateTimeOperand dayOfWeek)
         {
-            Value = dayOfWeek;
+            DayOfWeek_ = dayOfWeek;
         }
     }
 
@@ -30893,7 +30893,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand DayOfMonth_ { get; set; }
     }
 
     /// <summary>
@@ -30908,7 +30908,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand DayOfMonth_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -30916,7 +30916,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return DayOfMonth_.Underlying;
         }
 
         /// <summary>
@@ -30924,10 +30924,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return DayOfMonth_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in DayOfMonth_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -30975,7 +30975,7 @@ namespace AasCore.Aas3_2
 
         public DayOfMonth(DateTimeOperand dayOfMonth)
         {
-            Value = dayOfMonth;
+            DayOfMonth_ = dayOfMonth;
         }
     }
 
@@ -30991,7 +30991,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand Month_ { get; set; }
     }
 
     /// <summary>
@@ -31006,7 +31006,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand Month_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -31014,7 +31014,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return Month_.Underlying;
         }
 
         /// <summary>
@@ -31022,10 +31022,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return Month_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in Month_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -31073,7 +31073,7 @@ namespace AasCore.Aas3_2
 
         public Month(DateTimeOperand month)
         {
-            Value = month;
+            Month_ = month;
         }
     }
 
@@ -31089,7 +31089,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand Year_ { get; set; }
     }
 
     /// <summary>
@@ -31104,7 +31104,7 @@ namespace AasCore.Aas3_2
         /// <summary>
         /// The date-time operand
         /// </summary>
-        public DateTimeOperand Value { get; set; }
+        public DateTimeOperand Year_ { get; set; }
 
         /// <summary>
         /// Iterate over all the class instances referenced from this instance
@@ -31112,7 +31112,7 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> DescendOnce()
         {
-            yield return Value.Underlying;
+            yield return Year_.Underlying;
         }
 
         /// <summary>
@@ -31120,10 +31120,10 @@ namespace AasCore.Aas3_2
         /// </summary>
         public IEnumerable<IClass> Descend()
         {
-            yield return Value.Underlying;
+            yield return Year_.Underlying;
 
             // Recurse
-            foreach (var anItem in Value.Underlying.Descend())
+            foreach (var anItem in Year_.Underlying.Descend())
             {
                 yield return anItem;
             }
@@ -31171,7 +31171,7 @@ namespace AasCore.Aas3_2
 
         public Year(DateTimeOperand year)
         {
-            Value = year;
+            Year_ = year;
         }
     }
 

@@ -833,109 +833,109 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "Capability":
-                        return CapabilityFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "Entity":
-                        return EntityFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "Extension":
-                        return ExtensionFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "Operation":
-                        return OperationFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "Qualifier":
-                        return QualifierFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "SpecificAssetId":
-                        return SpecificAssetIdFrom(
-                            node, out error);
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelElementCollection":
-                        return SubmodelElementCollectionFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementList":
-                        return SubmodelElementListFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IHasSemantics: {modelType}");
-                        return default!;
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "Capability":
+                    return CapabilityFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "Entity":
+                    return EntityFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "Extension":
+                    return ExtensionFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "Operation":
+                    return OperationFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "Qualifier":
+                    return QualifierFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "SpecificAssetId":
+                    return SpecificAssetIdFrom(
+                        node, out error);
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelElementCollection":
+                    return SubmodelElementCollectionFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementList":
+                    return SubmodelElementListFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IHasSemantics: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IHasSemantics IHasSemanticsFrom
 
@@ -1053,109 +1053,109 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "AssetAdministrationShell":
-                        return AssetAdministrationShellFrom(
-                            node, out error);
-                    case "AssetAdministrationShellMetadata":
-                        return AssetAdministrationShellMetadataFrom(
-                            node, out error);
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "Capability":
-                        return CapabilityFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "ConceptDescription":
-                        return ConceptDescriptionFrom(
-                            node, out error);
-                    case "Entity":
-                        return EntityFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "Operation":
-                        return OperationFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelElementCollection":
-                        return SubmodelElementCollectionFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementList":
-                        return SubmodelElementListFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IHasExtensions: {modelType}");
-                        return default!;
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "AssetAdministrationShell":
+                    return AssetAdministrationShellFrom(
+                        node, out error);
+                case "AssetAdministrationShellMetadata":
+                    return AssetAdministrationShellMetadataFrom(
+                        node, out error);
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "Capability":
+                    return CapabilityFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "ConceptDescription":
+                    return ConceptDescriptionFrom(
+                        node, out error);
+                case "Entity":
+                    return EntityFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "Operation":
+                    return OperationFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelElementCollection":
+                    return SubmodelElementCollectionFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementList":
+                    return SubmodelElementListFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IHasExtensions: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IHasExtensions IHasExtensionsFrom
 
@@ -1186,109 +1186,109 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "AssetAdministrationShell":
-                        return AssetAdministrationShellFrom(
-                            node, out error);
-                    case "AssetAdministrationShellMetadata":
-                        return AssetAdministrationShellMetadataFrom(
-                            node, out error);
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "Capability":
-                        return CapabilityFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "ConceptDescription":
-                        return ConceptDescriptionFrom(
-                            node, out error);
-                    case "Entity":
-                        return EntityFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "Operation":
-                        return OperationFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelElementCollection":
-                        return SubmodelElementCollectionFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementList":
-                        return SubmodelElementListFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IReferable: {modelType}");
-                        return default!;
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "AssetAdministrationShell":
+                    return AssetAdministrationShellFrom(
+                        node, out error);
+                case "AssetAdministrationShellMetadata":
+                    return AssetAdministrationShellMetadataFrom(
+                        node, out error);
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "Capability":
+                    return CapabilityFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "ConceptDescription":
+                    return ConceptDescriptionFrom(
+                        node, out error);
+                case "Entity":
+                    return EntityFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "Operation":
+                    return OperationFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelElementCollection":
+                    return SubmodelElementCollectionFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementList":
+                    return SubmodelElementListFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IReferable: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IReferable IReferableFrom
 
@@ -1319,25 +1319,25 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AssetAdministrationShell":
-                        return AssetAdministrationShellFrom(
-                            node, out error);
-                    case "AssetAdministrationShellMetadata":
-                        return AssetAdministrationShellMetadataFrom(
-                            node, out error);
-                    case "ConceptDescription":
-                        return ConceptDescriptionFrom(
-                            node, out error);
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IIdentifiable: {modelType}");
-                        return default!;
+                case "AssetAdministrationShell":
+                    return AssetAdministrationShellFrom(
+                        node, out error);
+                case "AssetAdministrationShellMetadata":
+                    return AssetAdministrationShellMetadataFrom(
+                        node, out error);
+                case "ConceptDescription":
+                    return ConceptDescriptionFrom(
+                        node, out error);
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IIdentifiable: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IIdentifiable IIdentifiableFrom
 
@@ -1394,16 +1394,16 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IHasKind: {modelType}");
-                        return default!;
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IHasKind: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IHasKind IHasKindFrom
 
@@ -1434,112 +1434,112 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AdministrativeInformation":
-                        return AdministrativeInformationFrom(
-                            node, out error);
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "AssetAdministrationShell":
-                        return AssetAdministrationShellFrom(
-                            node, out error);
-                    case "AssetAdministrationShellMetadata":
-                        return AssetAdministrationShellMetadataFrom(
-                            node, out error);
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "Capability":
-                        return CapabilityFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "ConceptDescription":
-                        return ConceptDescriptionFrom(
-                            node, out error);
-                    case "Entity":
-                        return EntityFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "Operation":
-                        return OperationFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelElementCollection":
-                        return SubmodelElementCollectionFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementList":
-                        return SubmodelElementListFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IHasDataSpecification: {modelType}");
-                        return default!;
+                case "AdministrativeInformation":
+                    return AdministrativeInformationFrom(
+                        node, out error);
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "AssetAdministrationShell":
+                    return AssetAdministrationShellFrom(
+                        node, out error);
+                case "AssetAdministrationShellMetadata":
+                    return AssetAdministrationShellMetadataFrom(
+                        node, out error);
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "Capability":
+                    return CapabilityFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "ConceptDescription":
+                    return ConceptDescriptionFrom(
+                        node, out error);
+                case "Entity":
+                    return EntityFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "Operation":
+                    return OperationFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelElementCollection":
+                    return SubmodelElementCollectionFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementList":
+                    return SubmodelElementListFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IHasDataSpecification: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IHasDataSpecification IHasDataSpecificationFrom
 
@@ -1654,100 +1654,100 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "Capability":
-                        return CapabilityFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "Entity":
-                        return EntityFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "Operation":
-                        return OperationFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "Submodel":
-                        return SubmodelFrom(
-                            node, out error);
-                    case "SubmodelElementCollection":
-                        return SubmodelElementCollectionFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementList":
-                        return SubmodelElementListFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    case "SubmodelMetadata":
-                        return SubmodelMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IQualifiable: {modelType}");
-                        return default!;
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "Capability":
+                    return CapabilityFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "Entity":
+                    return EntityFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "Operation":
+                    return OperationFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "Submodel":
+                    return SubmodelFrom(
+                        node, out error);
+                case "SubmodelElementCollection":
+                    return SubmodelElementCollectionFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementList":
+                    return SubmodelElementListFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                case "SubmodelMetadata":
+                    return SubmodelMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IQualifiable: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IQualifiable IQualifiableFrom
 
@@ -2469,52 +2469,52 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "Capability":
-                        return CapabilityFrom(
-                            node, out error);
-                    case "Entity":
-                        return EntityFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "Operation":
-                        return OperationFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    case "SubmodelElementCollection":
-                        return SubmodelElementCollectionFrom(
-                            node, out error);
-                    case "SubmodelElementList":
-                        return SubmodelElementListFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for ISubmodelElement: {modelType}");
-                        return default!;
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "Capability":
+                    return CapabilityFrom(
+                        node, out error);
+                case "Entity":
+                    return EntityFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "Operation":
+                    return OperationFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                case "SubmodelElementCollection":
+                    return SubmodelElementCollectionFrom(
+                        node, out error);
+                case "SubmodelElementList":
+                    return SubmodelElementListFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for ISubmodelElement: {modelType}");
+                    return default!;
                 }
             }  // public static Our.ISubmodelElement ISubmodelElementFrom
 
@@ -2545,16 +2545,16 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AnnotatedRelationshipElement":
-                        return AnnotatedRelationshipElementFrom(
-                            node, out error);
-                    case "RelationshipElement":
-                        return RelationshipElementFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IRelationshipElement: {modelType}");
-                        return default!;
+                case "AnnotatedRelationshipElement":
+                    return AnnotatedRelationshipElementFrom(
+                        node, out error);
+                case "RelationshipElement":
+                    return RelationshipElementFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IRelationshipElement: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IRelationshipElement IRelationshipElementFrom
 
@@ -3028,28 +3028,28 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "Blob":
-                        return BlobFrom(
-                            node, out error);
-                    case "File":
-                        return FileFrom(
-                            node, out error);
-                    case "MultiLanguageProperty":
-                        return MultiLanguagePropertyFrom(
-                            node, out error);
-                    case "Property":
-                        return PropertyFrom(
-                            node, out error);
-                    case "Range":
-                        return RangeFrom(
-                            node, out error);
-                    case "ReferenceElement":
-                        return ReferenceElementFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IDataElement: {modelType}");
-                        return default!;
+                case "Blob":
+                    return BlobFrom(
+                        node, out error);
+                case "File":
+                    return FileFrom(
+                        node, out error);
+                case "MultiLanguageProperty":
+                    return MultiLanguagePropertyFrom(
+                        node, out error);
+                case "Property":
+                    return PropertyFrom(
+                        node, out error);
+                case "Range":
+                    return RangeFrom(
+                        node, out error);
+                case "ReferenceElement":
+                    return ReferenceElementFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IDataElement: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IDataElement IDataElementFrom
 
@@ -4373,13 +4373,13 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "BasicEventElement":
-                        return BasicEventElementFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IEventElement: {modelType}");
-                        return default!;
+                case "BasicEventElement":
+                    return BasicEventElementFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IEventElement: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IEventElement IEventElementFrom
 
@@ -5277,31 +5277,31 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "DefinitionTypeUom":
-                        return DefinitionTypeUomFrom(
-                            node, out error);
-                    case "LangStringDefinitionTypeIec61360":
-                        return LangStringDefinitionTypeIec61360From(
-                            node, out error);
-                    case "LangStringNameType":
-                        return LangStringNameTypeFrom(
-                            node, out error);
-                    case "LangStringPreferredNameTypeIec61360":
-                        return LangStringPreferredNameTypeIec61360From(
-                            node, out error);
-                    case "LangStringShortNameTypeIec61360":
-                        return LangStringShortNameTypeIec61360From(
-                            node, out error);
-                    case "LangStringTextType":
-                        return LangStringTextTypeFrom(
-                            node, out error);
-                    case "LangStringUom":
-                        return LangStringUomFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IAbstractLangString: {modelType}");
-                        return default!;
+                case "DefinitionTypeUom":
+                    return DefinitionTypeUomFrom(
+                        node, out error);
+                case "LangStringDefinitionTypeIec61360":
+                    return LangStringDefinitionTypeIec61360From(
+                        node, out error);
+                case "LangStringNameType":
+                    return LangStringNameTypeFrom(
+                        node, out error);
+                case "LangStringPreferredNameTypeIec61360":
+                    return LangStringPreferredNameTypeIec61360From(
+                        node, out error);
+                case "LangStringShortNameTypeIec61360":
+                    return LangStringShortNameTypeIec61360From(
+                        node, out error);
+                case "LangStringTextType":
+                    return LangStringTextTypeFrom(
+                        node, out error);
+                case "LangStringUom":
+                    return LangStringUomFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IAbstractLangString: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IAbstractLangString IAbstractLangStringFrom
 
@@ -5536,16 +5536,16 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "DataSpecificationIec61360":
-                        return DataSpecificationIec61360From(
-                            node, out error);
-                    case "DataSpecificationUom":
-                        return DataSpecificationUomFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IDataSpecificationContent: {modelType}");
-                        return default!;
+                case "DataSpecificationIec61360":
+                    return DataSpecificationIec61360From(
+                        node, out error);
+                case "DataSpecificationUom":
+                    return DataSpecificationUomFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IDataSpecificationContent: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IDataSpecificationContent IDataSpecificationContentFrom
 
@@ -6561,16 +6561,16 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AssetAdministrationShellDescriptor":
-                        return AssetAdministrationShellDescriptorFrom(
-                            node, out error);
-                    case "SubmodelDescriptor":
-                        return SubmodelDescriptorFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IDescriptor: {modelType}");
-                        return default!;
+                case "AssetAdministrationShellDescriptor":
+                    return AssetAdministrationShellDescriptorFrom(
+                        node, out error);
+                case "SubmodelDescriptor":
+                    return SubmodelDescriptorFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IDescriptor: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IDescriptor IDescriptorFrom
 
@@ -7271,19 +7271,19 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AssetAdministrationShellRecentChange":
-                        return AssetAdministrationShellRecentChangeFrom(
-                            node, out error);
-                    case "ConceptDescriptionRecentChange":
-                        return ConceptDescriptionRecentChangeFrom(
-                            node, out error);
-                    case "SubmodelRecentChange":
-                        return SubmodelRecentChangeFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for IRecentChange: {modelType}");
-                        return default!;
+                case "AssetAdministrationShellRecentChange":
+                    return AssetAdministrationShellRecentChangeFrom(
+                        node, out error);
+                case "ConceptDescriptionRecentChange":
+                    return ConceptDescriptionRecentChangeFrom(
+                        node, out error);
+                case "SubmodelRecentChange":
+                    return SubmodelRecentChangeFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for IRecentChange: {modelType}");
+                    return default!;
                 }
             }  // public static Our.IRecentChange IRecentChangeFrom
 
@@ -8613,52 +8613,52 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for ISubmodelElementAttributes: {modelType}");
-                        return default!;
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for ISubmodelElementAttributes: {modelType}");
+                    return default!;
                 }
             }  // public static Our.ISubmodelElementAttributes ISubmodelElementAttributesFrom
 
@@ -8689,52 +8689,52 @@ namespace AasCore.Aas3_2
 
                 switch (modelType)
                 {
-                    case "AnnotatedRelationshipElementMetadata":
-                        return AnnotatedRelationshipElementMetadataFrom(
-                            node, out error);
-                    case "BasicEventElementMetadata":
-                        return BasicEventElementMetadataFrom(
-                            node, out error);
-                    case "BlobMetadata":
-                        return BlobMetadataFrom(
-                            node, out error);
-                    case "CapabilityMetadata":
-                        return CapabilityMetadataFrom(
-                            node, out error);
-                    case "EntityMetadata":
-                        return EntityMetadataFrom(
-                            node, out error);
-                    case "FileMetadata":
-                        return FileMetadataFrom(
-                            node, out error);
-                    case "MultiLanguagePropertyMetadata":
-                        return MultiLanguagePropertyMetadataFrom(
-                            node, out error);
-                    case "OperationMetadata":
-                        return OperationMetadataFrom(
-                            node, out error);
-                    case "PropertyMetadata":
-                        return PropertyMetadataFrom(
-                            node, out error);
-                    case "RangeMetadata":
-                        return RangeMetadataFrom(
-                            node, out error);
-                    case "ReferenceElementMetadata":
-                        return ReferenceElementMetadataFrom(
-                            node, out error);
-                    case "RelationshipElementMetadata":
-                        return RelationshipElementMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementCollectionMetadata":
-                        return SubmodelElementCollectionMetadataFrom(
-                            node, out error);
-                    case "SubmodelElementListMetadata":
-                        return SubmodelElementListMetadataFrom(
-                            node, out error);
-                    default:
-                        error = new Reporting.Error(
-                            $"Unexpected model type for ISubmodelElementMetadata: {modelType}");
-                        return default!;
+                case "AnnotatedRelationshipElementMetadata":
+                    return AnnotatedRelationshipElementMetadataFrom(
+                        node, out error);
+                case "BasicEventElementMetadata":
+                    return BasicEventElementMetadataFrom(
+                        node, out error);
+                case "BlobMetadata":
+                    return BlobMetadataFrom(
+                        node, out error);
+                case "CapabilityMetadata":
+                    return CapabilityMetadataFrom(
+                        node, out error);
+                case "EntityMetadata":
+                    return EntityMetadataFrom(
+                        node, out error);
+                case "FileMetadata":
+                    return FileMetadataFrom(
+                        node, out error);
+                case "MultiLanguagePropertyMetadata":
+                    return MultiLanguagePropertyMetadataFrom(
+                        node, out error);
+                case "OperationMetadata":
+                    return OperationMetadataFrom(
+                        node, out error);
+                case "PropertyMetadata":
+                    return PropertyMetadataFrom(
+                        node, out error);
+                case "RangeMetadata":
+                    return RangeMetadataFrom(
+                        node, out error);
+                case "ReferenceElementMetadata":
+                    return ReferenceElementMetadataFrom(
+                        node, out error);
+                case "RelationshipElementMetadata":
+                    return RelationshipElementMetadataFrom(
+                        node, out error);
+                case "SubmodelElementCollectionMetadata":
+                    return SubmodelElementCollectionMetadataFrom(
+                        node, out error);
+                case "SubmodelElementListMetadata":
+                    return SubmodelElementListMetadataFrom(
+                        node, out error);
+                default:
+                    error = new Reporting.Error(
+                        $"Unexpected model type for ISubmodelElementMetadata: {modelType}");
+                    return default!;
                 }
             }  // public static Our.ISubmodelElementMetadata ISubmodelElementMetadataFrom
 
@@ -26859,7 +26859,7 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$hexCast", "Value", that.Value, Serialize_IUnion);
+                SetProperty(result, "$hexCast", "HexCast_", that.HexCast_, Serialize_IUnion);
 
                 return result;
             }
@@ -26881,7 +26881,12 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$dateTimeCast", "Value", that.Value, Serialize_IUnion);
+                SetProperty(
+                    result,
+                    "$dateTimeCast",
+                    "DateTimeCast_",
+                    that.DateTimeCast_,
+                    Serialize_IUnion);
 
                 return result;
             }
@@ -26892,7 +26897,7 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$timeCast", "Value", that.Value, Serialize_IUnion);
+                SetProperty(result, "$timeCast", "TimeCast_", that.TimeCast_, Serialize_IUnion);
 
                 return result;
             }
@@ -26903,7 +26908,7 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$dayOfWeek", "Value", that.Value, Serialize_IUnion);
+                SetProperty(result, "$dayOfWeek", "DayOfWeek_", that.DayOfWeek_, Serialize_IUnion);
 
                 return result;
             }
@@ -26914,7 +26919,12 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$dayOfMonth", "Value", that.Value, Serialize_IUnion);
+                SetProperty(
+                    result,
+                    "$dayOfMonth",
+                    "DayOfMonth_",
+                    that.DayOfMonth_,
+                    Serialize_IUnion);
 
                 return result;
             }
@@ -26925,7 +26935,7 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$month", "Value", that.Value, Serialize_IUnion);
+                SetProperty(result, "$month", "Month_", that.Month_, Serialize_IUnion);
 
                 return result;
             }
@@ -26936,7 +26946,7 @@ namespace AasCore.Aas3_2
             {
                 var result = new Nodes.JsonObject();
 
-                SetProperty(result, "$year", "Value", that.Value, Serialize_IUnion);
+                SetProperty(result, "$year", "Year_", that.Year_, Serialize_IUnion);
 
                 return result;
             }

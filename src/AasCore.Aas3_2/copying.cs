@@ -2018,7 +2018,7 @@ namespace AasCore.Aas3_2
                 Our.IHexCast that
             )
             {
-                return new Our.HexCast(that.Value);
+                return new Our.HexCast(that.HexCast_);
             }
 
             public override Our.IClass TransformBooleanCast(
@@ -2032,42 +2032,42 @@ namespace AasCore.Aas3_2
                 Our.IDateTimeCast that
             )
             {
-                return new Our.DateTimeCast(that.Value);
+                return new Our.DateTimeCast(that.DateTimeCast_);
             }
 
             public override Our.IClass TransformTimeCast(
                 Our.ITimeCast that
             )
             {
-                return new Our.TimeCast(that.Value);
+                return new Our.TimeCast(that.TimeCast_);
             }
 
             public override Our.IClass TransformDayOfWeek(
                 Our.IDayOfWeek that
             )
             {
-                return new Our.DayOfWeek(that.Value);
+                return new Our.DayOfWeek(that.DayOfWeek_);
             }
 
             public override Our.IClass TransformDayOfMonth(
                 Our.IDayOfMonth that
             )
             {
-                return new Our.DayOfMonth(that.Value);
+                return new Our.DayOfMonth(that.DayOfMonth_);
             }
 
             public override Our.IClass TransformMonth(
                 Our.IMonth that
             )
             {
-                return new Our.Month(that.Value);
+                return new Our.Month(that.Month_);
             }
 
             public override Our.IClass TransformYear(
                 Our.IYear that
             )
             {
-                return new Our.Year(that.Value);
+                return new Our.Year(that.Year_);
             }
 
             public override Our.IClass TransformDateTimeAttributeOperand(
@@ -2192,8 +2192,7 @@ namespace AasCore.Aas3_2
 
         /// <summary>Dispatch the making of deep copies.</summary>
         internal class DeepCopier : Visitation.AbstractTransformer<Our.IClass>
-        {
-            public override Our.IClass TransformExtension(
+        {    public override Our.IClass TransformExtension(
                 Our.IExtension that
             )
             {
@@ -4491,7 +4490,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.HexCast(
-                    Deep(that.Value)
+                    Deep(that.HexCast_)
                 );
             }
 
@@ -4509,7 +4508,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.DateTimeCast(
-                    Deep(that.Value)
+                    Deep(that.DateTimeCast_)
                 );
             }
 
@@ -4518,7 +4517,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.TimeCast(
-                    Deep(that.Value)
+                    Deep(that.TimeCast_)
                 );
             }
 
@@ -4527,7 +4526,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.DayOfWeek(
-                    Deep(that.Value)
+                    Deep(that.DayOfWeek_)
                 );
             }
 
@@ -4536,7 +4535,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.DayOfMonth(
-                    Deep(that.Value)
+                    Deep(that.DayOfMonth_)
                 );
             }
 
@@ -4545,7 +4544,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.Month(
-                    Deep(that.Value)
+                    Deep(that.Month_)
                 );
             }
 
@@ -4554,7 +4553,7 @@ namespace AasCore.Aas3_2
             )
             {
                 return new Our.Year(
-                    Deep(that.Value)
+                    Deep(that.Year_)
                 );
             }
 

@@ -3783,8 +3783,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.HexCast_,
+                        casted.HexCast_));
             }
 
             public override bool TransformBooleanCast(
@@ -3813,8 +3813,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.DateTimeCast_,
+                        casted.DateTimeCast_));
             }
 
             public override bool TransformTimeCast(
@@ -3828,8 +3828,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.TimeCast_,
+                        casted.TimeCast_));
             }
 
             public override bool TransformDayOfWeek(
@@ -3843,8 +3843,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.DayOfWeek_,
+                        casted.DayOfWeek_));
             }
 
             public override bool TransformDayOfMonth(
@@ -3858,8 +3858,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.DayOfMonth_,
+                        casted.DayOfMonth_));
             }
 
             public override bool TransformMonth(
@@ -3873,8 +3873,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.Month_,
+                        casted.Month_));
             }
 
             public override bool TransformYear(
@@ -3888,8 +3888,8 @@ namespace AasCore.Aas3_2.Tests
 
                 return (
                     Transform(
-                        that.Value,
-                        casted.Value));
+                        that.Year_,
+                        casted.Year_));
             }
 
             public override bool TransformDateTimeAttributeOperand(
@@ -6469,7 +6469,7 @@ namespace AasCore.Aas3_2.Tests
             Our.HexCast that,
             Our.HexCast other)
         {
-            return that.Value == other.Value;
+            return that.HexCast_ == other.HexCast_;
         }
 
         private static bool BooleanCastShallowEquals(
@@ -6483,42 +6483,42 @@ namespace AasCore.Aas3_2.Tests
             Our.DateTimeCast that,
             Our.DateTimeCast other)
         {
-            return that.Value == other.Value;
+            return that.DateTimeCast_ == other.DateTimeCast_;
         }
 
         private static bool TimeCastShallowEquals(
             Our.TimeCast that,
             Our.TimeCast other)
         {
-            return that.Value == other.Value;
+            return that.TimeCast_ == other.TimeCast_;
         }
 
         private static bool DayOfWeekShallowEquals(
             Our.DayOfWeek that,
             Our.DayOfWeek other)
         {
-            return that.Value == other.Value;
+            return that.DayOfWeek_ == other.DayOfWeek_;
         }
 
         private static bool DayOfMonthShallowEquals(
             Our.DayOfMonth that,
             Our.DayOfMonth other)
         {
-            return that.Value == other.Value;
+            return that.DayOfMonth_ == other.DayOfMonth_;
         }
 
         private static bool MonthShallowEquals(
             Our.Month that,
             Our.Month other)
         {
-            return that.Value == other.Value;
+            return that.Month_ == other.Month_;
         }
 
         private static bool YearShallowEquals(
             Our.Year that,
             Our.Year other)
         {
-            return that.Value == other.Value;
+            return that.Year_ == other.Year_;
         }
 
         private static bool DateTimeAttributeOperandShallowEquals(
