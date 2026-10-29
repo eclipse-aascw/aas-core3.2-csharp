@@ -1,0 +1,1 @@
+Expected a JsonObject representing TimeCastOperand, but got System.Text.Json.Nodes.JsonValueOfElement at: ["$timeCast"]

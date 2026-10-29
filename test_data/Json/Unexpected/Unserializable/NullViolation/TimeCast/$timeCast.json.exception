@@ -1,0 +1,1 @@
+Expected a JsonObject representing TimeCastOperand, but got a null at: ["$timeCast"]
