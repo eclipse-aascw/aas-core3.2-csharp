@@ -1,0 +1,1 @@
+Expected a JsonObject representing AssetInformation, but got System.Text.Json.Nodes.JsonValueOfElement at: assetInformation

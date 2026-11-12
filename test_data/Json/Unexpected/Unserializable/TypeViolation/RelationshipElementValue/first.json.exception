@@ -1,0 +1,1 @@
+Expected a JsonObject representing Reference, but got System.Text.Json.Nodes.JsonValueOfElement at: first
