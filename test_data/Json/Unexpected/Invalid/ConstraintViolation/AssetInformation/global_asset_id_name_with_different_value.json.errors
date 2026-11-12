@@ -1,0 +1,2 @@
+: Invariant violated:
+Constraint AASd-116: ``globalAssetId`` (case-insensitive) is a reserved key. If used as value for the name of specific asset ID then the value of specific asset ID shall be identical to the global asset ID with semantics as defined in https://admin-shell.io/aas/3/x/AssetInformation/globalAssetId, x being the minor version of the used specification.

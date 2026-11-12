@@ -1,0 +1,34 @@
+name: Doc
+
+on:
+  push:
+    branches:
+      - main
+  # We need to manually run the workflow for debugging purposes. 
+  workflow_dispatch: 
+
+jobs:
+  Generate-doc:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install .NET 10
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install Docfx
+        run: dotnet tool install -g docfx --version 2.81.0
+
+      - name: Build the solution
+        run: dotnet build src/
+
+      - name: Generate the documentation
+        run: docfx doc/source/docfx.json
+
+      - name: Deploy to gh-pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc/build

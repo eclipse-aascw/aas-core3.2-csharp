@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="DebugSlow" />
+    <BuildType Name="Release" />
+    <Platform Name="Any CPU" />
+  </Configurations>
+  <Project Path="AasCore.Aas3_2.Tests/AasCore.Aas3_2.Tests.csproj" />
+  <Project Path="AasCore.Aas3_2/AasCore.Aas3_2.csproj" />
+</Solution>

@@ -1,0 +1,1 @@
+Expected a JsonObject representing IDataSpecificationContent, but got System.Text.Json.Nodes.JsonValueOfElement at: dataSpecificationContent

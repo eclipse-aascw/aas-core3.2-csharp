@@ -1,0 +1,2 @@
+: Invariant violated:
+Constraint AASd-137: For external references, i.e. References with Reference/type = ExternalReference, the value of Key/type of any key in Reference/keys shall not be one of AAS referables.
