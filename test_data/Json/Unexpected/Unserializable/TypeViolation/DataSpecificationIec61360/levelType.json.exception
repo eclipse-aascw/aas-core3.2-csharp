@@ -1,0 +1,1 @@
+Expected a JsonObject representing LevelType, but got System.Text.Json.Nodes.JsonValueOfElement at: levelType

@@ -1,0 +1,23 @@
+<embeddedDataSpecification xmlns="https://admin-shell.io/aas/3/2">
+  <dataSpecification>
+    <type>ExternalReference</type>
+    <keys>
+      <key>
+        <type>GlobalReference</type>
+        <value>urn:some-company:10:9ac9d1a6</value>
+      </key>
+    </keys>
+  </dataSpecification>
+  <dataSpecificationContent>
+    <dataSpecificationUom>
+      <preferredName>
+        <langStringUom>
+          <language>en-JM-x-b435b532</language>
+          <text>0</text>
+        </langStringUom>
+      </preferredName>
+      <symbol>&lt;ă&lt;P󨱽²|dnÞ®</symbol>
+    </dataSpecificationUom>
+  </dataSpecificationContent>
+  <unexpectedAdditionalProperty>UNEXPECTED-ADDITIONAL-PROPERTY</unexpectedAdditionalProperty>
+</embeddedDataSpecification>

@@ -1,0 +1,1 @@
+Expected a JsonObject representing ProtocolInformation, but got System.Text.Json.Nodes.JsonValueOfElement at: protocolInformation
