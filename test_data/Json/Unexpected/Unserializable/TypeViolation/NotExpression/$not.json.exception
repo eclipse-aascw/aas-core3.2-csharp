@@ -1,0 +1,1 @@
+Expected a JsonObject representing LogicalExpression, but got System.Text.Json.Nodes.JsonValueOfElement at: ["$not"]
