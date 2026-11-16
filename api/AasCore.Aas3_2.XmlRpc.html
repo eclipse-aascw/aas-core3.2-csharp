@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class XmlRpc </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class XmlRpc ">
+    
+    <meta name="description" content="Provide de/serialization of JSON-able values to/from a restricted subset of XML-RPC&#39;s own element vocabulary.">
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_2.XmlRpc">
+
+
+
+  <h1 id="AasCore_Aas3_2_XmlRpc" data-uid="AasCore.Aas3_2.XmlRpc" class="text-break">Class XmlRpc</h1>
+  <div class="markdown level0 summary"><p>Provide de/serialization of JSON-able values to/from a restricted
+subset of XML-RPC's own element vocabulary.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">XmlRpc</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <span class="xref">AasCore</span>.<a class="xref" href="AasCore.Aas3_2.html">Aas3_2</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_2.dll</h6>
+  <h5 id="AasCore_Aas3_2_XmlRpc_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class XmlRpc</code></pre>
+  </div>
+  <h5 id="AasCore_Aas3_2_XmlRpc_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>These elements reside in no namespace at all, as the XML-RPC
+specification prescribes, and not in the namespace of the enclosing
+document. The outermost one therefore undeclares the default namespace
+with <code>xmlns=&quot;&quot;</code>, and the elements nested in it inherit that.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_DeserializeArrayBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.DeserializeArrayBodyFrom(System.Xml.XmlReader%2CAasCore.Aas3_2.Reporting.Error%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L405">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_DeserializeArrayBodyFrom_" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeArrayBodyFrom*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_DeserializeArrayBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeArrayBodyFrom(System.Xml.XmlReader,AasCore.Aas3_2.Reporting.Error@)">DeserializeArrayBodyFrom(XmlReader, out Error?)</h4>
+  <div class="markdown level1 summary"><p>Deserialize a JSON array's body, embedded within a larger XML document
+which is already being read through <code class="paramref">reader</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonArray? DeserializeArrayBodyFrom(XmlReader reader, out Reporting.Error? error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Reporting.html">Reporting</a>.<a class="xref" href="AasCore.Aas3_2.Reporting.Error.html">Error</a></td>
+        <td><span class="parametername">error</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonarray">JsonArray</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_DeserializeArrayBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><code class="paramref">reader</code> is expected to be positioned at the start
+element <code>&lt;data&gt;</code>. On success, <code class="paramref">reader</code> is
+left positioned at the node right after the <code>&lt;data&gt;</code>
+element's own end element.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_DeserializeStructBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.DeserializeStructBodyFrom(System.Xml.XmlReader%2CAasCore.Aas3_2.Reporting.Error%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L592">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_DeserializeStructBodyFrom_" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeStructBodyFrom*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_DeserializeStructBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeStructBodyFrom(System.Xml.XmlReader,AasCore.Aas3_2.Reporting.Error@)">DeserializeStructBodyFrom(XmlReader, out Error?)</h4>
+  <div class="markdown level1 summary"><p>Deserialize a JSON object's body, embedded within a larger XML document
+which is already being read through <code class="paramref">reader</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject? DeserializeStructBodyFrom(XmlReader reader, out Reporting.Error? error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Reporting.html">Reporting</a>.<a class="xref" href="AasCore.Aas3_2.Reporting.Error.html">Error</a></td>
+        <td><span class="parametername">error</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_DeserializeStructBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><code class="paramref">reader</code> is expected to be positioned either at
+the first <code>&lt;member&gt;</code> start element, or already at
+the enclosing element's own end element if there are no members at
+all. On success, <code class="paramref">reader</code> is left positioned at
+that same enclosing element's end element -- unlike
+<a class="xref" href="AasCore.Aas3_2.XmlRpc.html#AasCore_Aas3_2_XmlRpc_DeserializeArrayBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__">DeserializeArrayBodyFrom(XmlReader, out Error?)</a>, this function does <em>not</em>
+consume a wrapper element of its own, mirroring how a
+<code>JSONObject</code>-typed property is represented directly as
+zero or more <code>&lt;member&gt;</code> elements with no enclosing
+<code>&lt;struct&gt;</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_DeserializeValue_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.DeserializeValue(System.Xml.XmlReader%2CAasCore.Aas3_2.Reporting.Error%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L646">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_DeserializeValue_" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeValue*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_DeserializeValue_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeValue(System.Xml.XmlReader,AasCore.Aas3_2.Reporting.Error@)">DeserializeValue(XmlReader, out Error?)</h4>
+  <div class="markdown level1 summary"><p>Deserialize a JSON-able value from a stand-alone XML-RPC
+<code>&lt;value&gt;</code> element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonNode? DeserializeValue(XmlReader reader, out Reporting.Error? error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Reporting.html">Reporting</a>.<a class="xref" href="AasCore.Aas3_2.Reporting.Error.html">Error</a></td>
+        <td><span class="parametername">error</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_DeserializeValue_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><code class="paramref">reader</code> is expected to be positioned at
+the <code>&lt;value&gt;</code> start element itself (as opposed to
+<a class="xref" href="AasCore.Aas3_2.XmlRpc.html#AasCore_Aas3_2_XmlRpc_DeserializeValueFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__">DeserializeValueFrom(XmlReader, out Error?)</a>, which expects to be positioned at
+the discriminator directly).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_DeserializeValueFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.DeserializeValueFrom(System.Xml.XmlReader%2CAasCore.Aas3_2.Reporting.Error%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L195">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_DeserializeValueFrom_" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeValueFrom*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_DeserializeValueFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__" data-uid="AasCore.Aas3_2.XmlRpc.DeserializeValueFrom(System.Xml.XmlReader,AasCore.Aas3_2.Reporting.Error@)">DeserializeValueFrom(XmlReader, out Error?)</h4>
+  <div class="markdown level1 summary"><p>Deserialize a JSON-able value, embedded within a larger XML document
+which is already being read through <code class="paramref">reader</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonNode? DeserializeValueFrom(XmlReader reader, out Reporting.Error? error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Reporting.html">Reporting</a>.<a class="xref" href="AasCore.Aas3_2.Reporting.Error.html">Error</a></td>
+        <td><span class="parametername">error</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_DeserializeValueFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><code class="paramref">reader</code> is expected to be positioned at the start
+element of the discriminator (<code>&lt;nil&gt;</code>, <code>&lt;boolean&gt;</code>,
+<code>&lt;double&gt;</code>, <code>&lt;string&gt;</code>, <code>&lt;array&gt;</code> or
+<code>&lt;struct&gt;</code>). On success, <code class="paramref">reader</code> is left
+positioned at the node right after the discriminator's own end
+element.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_SerializeArrayBodyTo_System_Text_Json_Nodes_JsonArray_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.SerializeArrayBodyTo(System.Text.Json.Nodes.JsonArray%2CSystem.Xml.XmlWriter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L810">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_SerializeArrayBodyTo_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeArrayBodyTo*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_SerializeArrayBodyTo_System_Text_Json_Nodes_JsonArray_System_Xml_XmlWriter_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeArrayBodyTo(System.Text.Json.Nodes.JsonArray,System.Xml.XmlWriter)">SerializeArrayBodyTo(JsonArray, XmlWriter)</h4>
+  <div class="markdown level1 summary"><p>Serialize the JSON array <code class="paramref">that</code>'s body, embedded
+within a larger XML document which is already being written through
+<code class="paramref">writer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SerializeArrayBodyTo(JsonArray that, XmlWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonarray">JsonArray</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_SerializeArrayBodyTo_System_Text_Json_Nodes_JsonArray_System_Xml_XmlWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This writes exactly one <code>&lt;data&gt;</code> element.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_SerializeStructBodyTo_System_Text_Json_Nodes_JsonObject_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.SerializeStructBodyTo(System.Text.Json.Nodes.JsonObject%2CSystem.Xml.XmlWriter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L847">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_SerializeStructBodyTo_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeStructBodyTo*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_SerializeStructBodyTo_System_Text_Json_Nodes_JsonObject_System_Xml_XmlWriter_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeStructBodyTo(System.Text.Json.Nodes.JsonObject,System.Xml.XmlWriter)">SerializeStructBodyTo(JsonObject, XmlWriter)</h4>
+  <div class="markdown level1 summary"><p>Serialize the JSON object <code class="paramref">that</code>'s body, embedded
+within a larger XML document which is already being written through
+<code class="paramref">writer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SerializeStructBodyTo(JsonObject that, XmlWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_SerializeStructBodyTo_System_Text_Json_Nodes_JsonObject_System_Xml_XmlWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This writes zero or more <code>&lt;member&gt;</code> elements, with no
+enclosing element of its own -- mirrors
+<a class="xref" href="AasCore.Aas3_2.XmlRpc.html#AasCore_Aas3_2_XmlRpc_DeserializeStructBodyFrom_System_Xml_XmlReader_AasCore_Aas3_2_Reporting_Error__">DeserializeStructBodyFrom(XmlReader, out Error?)</a> on the reading side.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_SerializeValue_System_Text_Json_Nodes_JsonNode_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.SerializeValue(System.Text.Json.Nodes.JsonNode%2CSystem.Xml.XmlWriter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L886">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_SerializeValue_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeValue*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_SerializeValue_System_Text_Json_Nodes_JsonNode_System_Xml_XmlWriter_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeValue(System.Text.Json.Nodes.JsonNode,System.Xml.XmlWriter)">SerializeValue(JsonNode?, XmlWriter)</h4>
+  <div class="markdown level1 summary"><p>Serialize <code class="paramref">that</code> to a stand-alone XML-RPC
+<code>&lt;value&gt;</code> element, written through <code class="paramref">writer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SerializeValue(JsonNode? that, XmlWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SerializationException.html">SerializationException</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is not JSON-able, carrying the path
+to the culprit within it</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc_SerializeValueTo_System_Text_Json_Nodes_JsonNode_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc.SerializeValueTo(System.Text.Json.Nodes.JsonNode%2CSystem.Xml.XmlWriter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L701">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_XmlRpc_SerializeValueTo_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeValueTo*"></a>
+  <h4 id="AasCore_Aas3_2_XmlRpc_SerializeValueTo_System_Text_Json_Nodes_JsonNode_System_Xml_XmlWriter_" data-uid="AasCore.Aas3_2.XmlRpc.SerializeValueTo(System.Text.Json.Nodes.JsonNode,System.Xml.XmlWriter)">SerializeValueTo(JsonNode?, XmlWriter)</h4>
+  <div class="markdown level1 summary"><p>Serialize <code class="paramref">that</code>, embedded within a larger XML
+document which is already being written through
+<code class="paramref">writer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SerializeValueTo(JsonNode? that, XmlWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_XmlRpc_SerializeValueTo_System_Text_Json_Nodes_JsonNode_System_Xml_XmlWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This writes exactly one discriminator element (<code>&lt;nil&gt;</code>,
+<code>&lt;boolean&gt;</code>, <code>&lt;double&gt;</code>, <code>&lt;string&gt;</code>,
+<code>&lt;array&gt;</code> or <code>&lt;struct&gt;</code>). <code class="paramref">that</code>
+must be JSON-able (recursively a null, a boolean, a number, a string,
+an array or an object with string keys), or a
+<span class="xref">AasCore.Aas3_2.SerializationFailure</span> is thrown, carrying
+the path to the culprit within <code class="paramref">that</code>. The enclosing
+serializer converts it -- <a class="xref" href="AasCore.Aas3_2.Xmlization.Serialize.html#AasCore_Aas3_2_Xmlization_Serialize_To_AasCore_Aas3_2_IClass_System_Xml_XmlWriter_">To(IClass, XmlWriter)</a> does,
+and so does <a class="xref" href="AasCore.Aas3_2.XmlRpc.html#AasCore_Aas3_2_XmlRpc_SerializeValue_System_Text_Json_Nodes_JsonNode_System_Xml_XmlWriter_">SerializeValue(JsonNode?, XmlWriter)</a> -- so a caller driving this
+method itself catches <a class="xref" href="AasCore.Aas3_2.SerializationException.html">SerializationException</a> around
+the whole document instead.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_XmlRpc.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.XmlRpc%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/xmlrpc.cs/#L26" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

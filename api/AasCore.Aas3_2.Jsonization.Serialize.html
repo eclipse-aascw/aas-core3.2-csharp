@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class Jsonization.Serialize </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class Jsonization.Serialize ">
+    
+    <meta name="description" content="Serialize instances of meta-model classes to JSON elements.">
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_2.Jsonization.Serialize">
+
+
+
+  <h1 id="AasCore_Aas3_2_Jsonization_Serialize" data-uid="AasCore.Aas3_2.Jsonization.Serialize" class="text-break">Class Jsonization.Serialize</h1>
+  <div class="markdown level0 summary"><p>Serialize instances of meta-model classes to JSON elements.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">Jsonization.Serialize</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <span class="xref">AasCore</span>.<a class="xref" href="AasCore.Aas3_2.html">Aas3_2</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_2.dll</h6>
+  <h5 id="AasCore_Aas3_2_Jsonization_Serialize_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Jsonization.Serialize</code></pre>
+  </div>
+  <h5 id="AasCore_Aas3_2_Jsonization_Serialize_examples"><strong>Examples</strong></h5>
+  <p>Here is an example how to serialize an instance of IHasSemantics:</p>
+<pre><code class="lang-csharp">var anInstance = new Our.IHasSemantics(
+    // ... some constructor arguments ...
+);
+System.Text.Json.Nodes.JsonObject element = (
+    Serialize.ToJsonObject(
+        anInstance));</code></pre>
+
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_AasSubmodelElementsToJsonValue_AasCore_Aas3_2_AasSubmodelElements_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.AasSubmodelElementsToJsonValue(AasCore.Aas3_2.AasSubmodelElements)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27466">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_AasSubmodelElementsToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.AasSubmodelElementsToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_AasSubmodelElementsToJsonValue_AasCore_Aas3_2_AasSubmodelElements_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.AasSubmodelElementsToJsonValue(AasCore.Aas3_2.AasSubmodelElements)">AasSubmodelElementsToJsonValue(AasSubmodelElements)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of AasSubmodelElements into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue AasSubmodelElementsToJsonValue(AasSubmodelElements that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.AasSubmodelElements.html">AasSubmodelElements</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of AasSubmodelElements at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_AssetKindToJsonValue_AasCore_Aas3_2_AssetKind_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.AssetKindToJsonValue(AasCore.Aas3_2.AssetKind)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27449">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_AssetKindToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.AssetKindToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_AssetKindToJsonValue_AasCore_Aas3_2_AssetKind_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.AssetKindToJsonValue(AasCore.Aas3_2.AssetKind)">AssetKindToJsonValue(AssetKind)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of AssetKind into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue AssetKindToJsonValue(AssetKind that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.AssetKind.html">AssetKind</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of AssetKind at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ContentToJsonValue_AasCore_Aas3_2_Content_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ContentToJsonValue(AasCore.Aas3_2.Content)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27721">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ContentToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ContentToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ContentToJsonValue_AasCore_Aas3_2_Content_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ContentToJsonValue(AasCore.Aas3_2.Content)">ContentToJsonValue(Content)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of Content into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue ContentToJsonValue(Content that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Content.html">Content</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of Content at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_DataTypeDefXsdToJsonValue_AasCore_Aas3_2_DataTypeDefXsd_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.DataTypeDefXsdToJsonValue(AasCore.Aas3_2.DataTypeDefXsd)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27568">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_DataTypeDefXsdToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DataTypeDefXsdToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_DataTypeDefXsdToJsonValue_AasCore_Aas3_2_DataTypeDefXsd_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DataTypeDefXsdToJsonValue(AasCore.Aas3_2.DataTypeDefXsd)">DataTypeDefXsdToJsonValue(DataTypeDefXsd)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of DataTypeDefXsd into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue DataTypeDefXsdToJsonValue(DataTypeDefXsd that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DataTypeDefXsd.html">DataTypeDefXsd</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of DataTypeDefXsd at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_DataTypeIec61360ToJsonValue_AasCore_Aas3_2_DataTypeIec61360_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.DataTypeIec61360ToJsonValue(AasCore.Aas3_2.DataTypeIec61360)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27585">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_DataTypeIec61360ToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DataTypeIec61360ToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_DataTypeIec61360ToJsonValue_AasCore_Aas3_2_DataTypeIec61360_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DataTypeIec61360ToJsonValue(AasCore.Aas3_2.DataTypeIec61360)">DataTypeIec61360ToJsonValue(DataTypeIec61360)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of DataTypeIec61360 into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue DataTypeIec61360ToJsonValue(DataTypeIec61360 that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DataTypeIec61360.html">DataTypeIec61360</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of DataTypeIec61360 at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_DateTimeGlobalAttributeKindToJsonValue_AasCore_Aas3_2_DateTimeGlobalAttributeKind_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.DateTimeGlobalAttributeKindToJsonValue(AasCore.Aas3_2.DateTimeGlobalAttributeKind)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27772">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_DateTimeGlobalAttributeKindToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DateTimeGlobalAttributeKindToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_DateTimeGlobalAttributeKindToJsonValue_AasCore_Aas3_2_DateTimeGlobalAttributeKind_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DateTimeGlobalAttributeKindToJsonValue(AasCore.Aas3_2.DateTimeGlobalAttributeKind)">DateTimeGlobalAttributeKindToJsonValue(DateTimeGlobalAttributeKind)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of DateTimeGlobalAttributeKind into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue DateTimeGlobalAttributeKindToJsonValue(DateTimeGlobalAttributeKind that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DateTimeGlobalAttributeKind.html">DateTimeGlobalAttributeKind</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of DateTimeGlobalAttributeKind at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_DirectionToJsonValue_AasCore_Aas3_2_Direction_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.DirectionToJsonValue(AasCore.Aas3_2.Direction)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27500">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_DirectionToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DirectionToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_DirectionToJsonValue_AasCore_Aas3_2_Direction_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.DirectionToJsonValue(AasCore.Aas3_2.Direction)">DirectionToJsonValue(Direction)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of Direction into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue DirectionToJsonValue(Direction that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Direction.html">Direction</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of Direction at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_EntityTypeToJsonValue_AasCore_Aas3_2_EntityType_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.EntityTypeToJsonValue(AasCore.Aas3_2.EntityType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27483">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_EntityTypeToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.EntityTypeToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_EntityTypeToJsonValue_AasCore_Aas3_2_EntityType_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.EntityTypeToJsonValue(AasCore.Aas3_2.EntityType)">EntityTypeToJsonValue(EntityType)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of EntityType into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue EntityTypeToJsonValue(EntityType that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.EntityType.html">EntityType</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of EntityType at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ExecutionStateToJsonValue_AasCore_Aas3_2_ExecutionState_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ExecutionStateToJsonValue(AasCore.Aas3_2.ExecutionState)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27687">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ExecutionStateToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ExecutionStateToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ExecutionStateToJsonValue_AasCore_Aas3_2_ExecutionState_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ExecutionStateToJsonValue(AasCore.Aas3_2.ExecutionState)">ExecutionStateToJsonValue(ExecutionState)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of ExecutionState into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue ExecutionStateToJsonValue(ExecutionState that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ExecutionState.html">ExecutionState</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of ExecutionState at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ExtentToJsonValue_AasCore_Aas3_2_Extent_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ExtentToJsonValue(AasCore.Aas3_2.Extent)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27738">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ExtentToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ExtentToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ExtentToJsonValue_AasCore_Aas3_2_Extent_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ExtentToJsonValue(AasCore.Aas3_2.Extent)">ExtentToJsonValue(Extent)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of Extent into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue ExtentToJsonValue(Extent that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Extent.html">Extent</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of Extent at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_GlobalAttributeKindToJsonValue_AasCore_Aas3_2_GlobalAttributeKind_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.GlobalAttributeKindToJsonValue(AasCore.Aas3_2.GlobalAttributeKind)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27755">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_GlobalAttributeKindToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.GlobalAttributeKindToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_GlobalAttributeKindToJsonValue_AasCore_Aas3_2_GlobalAttributeKind_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.GlobalAttributeKindToJsonValue(AasCore.Aas3_2.GlobalAttributeKind)">GlobalAttributeKindToJsonValue(GlobalAttributeKind)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of GlobalAttributeKind into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue GlobalAttributeKindToJsonValue(GlobalAttributeKind that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.GlobalAttributeKind.html">GlobalAttributeKind</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of GlobalAttributeKind at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_JsonValueToJsonNode_System_Text_Json_Nodes_JsonNode_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.JsonValueToJsonNode(System.Text.Json.Nodes.JsonNode)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27393">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_JsonValueToJsonNode_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.JsonValueToJsonNode*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_JsonValueToJsonNode_System_Text_Json_Nodes_JsonNode_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.JsonValueToJsonNode(System.Text.Json.Nodes.JsonNode)">JsonValueToJsonNode(JsonNode?)</h4>
+  <div class="markdown level1 summary"><p>Serialize the JSON-able value <code class="paramref">that</code> into a JSON node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonNode? JsonValueToJsonNode(JsonNode? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Jsonization_Serialize_JsonValueToJsonNode_System_Text_Json_Nodes_JsonNode__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The result is a deep, independent copy of <code class="paramref">that</code>.
+A <code>null</code> is a JSON null.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">SerializationException</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> contains, at any depth, an infinity,
+a not-a-number or an integer outside the safe integer range
+[-2^53 + 1, 2^53 - 1]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_KeyTypesToJsonValue_AasCore_Aas3_2_KeyTypes_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.KeyTypesToJsonValue(AasCore.Aas3_2.KeyTypes)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27551">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_KeyTypesToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.KeyTypesToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_KeyTypesToJsonValue_AasCore_Aas3_2_KeyTypes_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.KeyTypesToJsonValue(AasCore.Aas3_2.KeyTypes)">KeyTypesToJsonValue(KeyTypes)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of KeyTypes into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue KeyTypesToJsonValue(KeyTypes that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.KeyTypes.html">KeyTypes</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of KeyTypes at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_LevelToJsonValue_AasCore_Aas3_2_Level_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.LevelToJsonValue(AasCore.Aas3_2.Level)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27704">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_LevelToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.LevelToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_LevelToJsonValue_AasCore_Aas3_2_Level_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.LevelToJsonValue(AasCore.Aas3_2.Level)">LevelToJsonValue(Level)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of Level into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue LevelToJsonValue(Level that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Level.html">Level</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of Level at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_MessageTypeEnumToJsonValue_AasCore_Aas3_2_MessageTypeEnum_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.MessageTypeEnumToJsonValue(AasCore.Aas3_2.MessageTypeEnum)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27670">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_MessageTypeEnumToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.MessageTypeEnumToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_MessageTypeEnumToJsonValue_AasCore_Aas3_2_MessageTypeEnum_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.MessageTypeEnumToJsonValue(AasCore.Aas3_2.MessageTypeEnum)">MessageTypeEnumToJsonValue(MessageTypeEnum)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of MessageTypeEnum into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue MessageTypeEnumToJsonValue(MessageTypeEnum that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.MessageTypeEnum.html">MessageTypeEnum</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of MessageTypeEnum at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ModellingKindToJsonValue_AasCore_Aas3_2_ModellingKind_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ModellingKindToJsonValue(AasCore.Aas3_2.ModellingKind)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27415">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ModellingKindToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ModellingKindToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ModellingKindToJsonValue_AasCore_Aas3_2_ModellingKind_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ModellingKindToJsonValue(AasCore.Aas3_2.ModellingKind)">ModellingKindToJsonValue(ModellingKind)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of ModellingKind into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue ModellingKindToJsonValue(ModellingKind that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ModellingKind.html">ModellingKind</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of ModellingKind at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_QualifierKindToJsonValue_AasCore_Aas3_2_QualifierKind_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.QualifierKindToJsonValue(AasCore.Aas3_2.QualifierKind)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27432">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_QualifierKindToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.QualifierKindToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_QualifierKindToJsonValue_AasCore_Aas3_2_QualifierKind_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.QualifierKindToJsonValue(AasCore.Aas3_2.QualifierKind)">QualifierKindToJsonValue(QualifierKind)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of QualifierKind into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue QualifierKindToJsonValue(QualifierKind that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.QualifierKind.html">QualifierKind</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of QualifierKind at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_QuerySelectToJsonValue_AasCore_Aas3_2_QuerySelect_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.QuerySelectToJsonValue(AasCore.Aas3_2.QuerySelect)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27789">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_QuerySelectToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.QuerySelectToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_QuerySelectToJsonValue_AasCore_Aas3_2_QuerySelect_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.QuerySelectToJsonValue(AasCore.Aas3_2.QuerySelect)">QuerySelectToJsonValue(QuerySelect)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of QuerySelect into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue QuerySelectToJsonValue(QuerySelect that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.QuerySelect.html">QuerySelect</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of QuerySelect at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ReferenceTypesToJsonValue_AasCore_Aas3_2_ReferenceTypes_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ReferenceTypesToJsonValue(AasCore.Aas3_2.ReferenceTypes)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27534">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ReferenceTypesToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ReferenceTypesToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ReferenceTypesToJsonValue_AasCore_Aas3_2_ReferenceTypes_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ReferenceTypesToJsonValue(AasCore.Aas3_2.ReferenceTypes)">ReferenceTypesToJsonValue(ReferenceTypes)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of ReferenceTypes into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue ReferenceTypesToJsonValue(ReferenceTypes that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ReferenceTypes.html">ReferenceTypes</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of ReferenceTypes at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_SecurityTypeEnumToJsonValue_AasCore_Aas3_2_SecurityTypeEnum_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.SecurityTypeEnumToJsonValue(AasCore.Aas3_2.SecurityTypeEnum)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27619">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_SecurityTypeEnumToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.SecurityTypeEnumToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_SecurityTypeEnumToJsonValue_AasCore_Aas3_2_SecurityTypeEnum_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.SecurityTypeEnumToJsonValue(AasCore.Aas3_2.SecurityTypeEnum)">SecurityTypeEnumToJsonValue(SecurityTypeEnum)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of SecurityTypeEnum into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue SecurityTypeEnumToJsonValue(SecurityTypeEnum that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SecurityTypeEnum.html">SecurityTypeEnum</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of SecurityTypeEnum at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_SerializationFormatToJsonValue_AasCore_Aas3_2_SerializationFormat_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.SerializationFormatToJsonValue(AasCore.Aas3_2.SerializationFormat)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27602">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_SerializationFormatToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.SerializationFormatToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_SerializationFormatToJsonValue_AasCore_Aas3_2_SerializationFormat_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.SerializationFormatToJsonValue(AasCore.Aas3_2.SerializationFormat)">SerializationFormatToJsonValue(SerializationFormat)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of SerializationFormat into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue SerializationFormatToJsonValue(SerializationFormat that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SerializationFormat.html">SerializationFormat</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of SerializationFormat at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ServiceSpecificationProfileEnumToJsonValue_AasCore_Aas3_2_ServiceSpecificationProfileEnum_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ServiceSpecificationProfileEnumToJsonValue(AasCore.Aas3_2.ServiceSpecificationProfileEnum)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27636">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ServiceSpecificationProfileEnumToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ServiceSpecificationProfileEnumToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ServiceSpecificationProfileEnumToJsonValue_AasCore_Aas3_2_ServiceSpecificationProfileEnum_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ServiceSpecificationProfileEnumToJsonValue(AasCore.Aas3_2.ServiceSpecificationProfileEnum)">ServiceSpecificationProfileEnumToJsonValue(ServiceSpecificationProfileEnum)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of ServiceSpecificationProfileEnum into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue ServiceSpecificationProfileEnumToJsonValue(ServiceSpecificationProfileEnum that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ServiceSpecificationProfileEnum.html">ServiceSpecificationProfileEnum</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of ServiceSpecificationProfileEnum at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_StateOfEventToJsonValue_AasCore_Aas3_2_StateOfEvent_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.StateOfEventToJsonValue(AasCore.Aas3_2.StateOfEvent)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27517">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_StateOfEventToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.StateOfEventToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_StateOfEventToJsonValue_AasCore_Aas3_2_StateOfEvent_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.StateOfEventToJsonValue(AasCore.Aas3_2.StateOfEvent)">StateOfEventToJsonValue(StateOfEvent)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of StateOfEvent into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue StateOfEventToJsonValue(StateOfEvent that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.StateOfEvent.html">StateOfEvent</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of StateOfEvent at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_StatusCodeToJsonValue_AasCore_Aas3_2_StatusCode_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.StatusCodeToJsonValue(AasCore.Aas3_2.StatusCode)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27653">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_StatusCodeToJsonValue_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.StatusCodeToJsonValue*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_StatusCodeToJsonValue_AasCore_Aas3_2_StatusCode_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.StatusCodeToJsonValue(AasCore.Aas3_2.StatusCode)">StatusCodeToJsonValue(StatusCode)</h4>
+  <div class="markdown level1 summary"><p>Serialize a literal of StatusCode into a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonValue StatusCodeToJsonValue(StatusCode that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.StatusCode.html">StatusCode</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonvalue">JsonValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.html">SerializationFailure</a></td>
+        <td><p>Thrown when <code class="paramref">that</code> is no literal of StatusCode at all.
+<a class="xref" href="AasCore.Aas3_2.Jsonization.Serialize.html#AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_">ToJsonObject(IClass)</a> converts it, so a caller which serializes
+a whole instance catches <a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">Jsonization.SerializationException</a> instead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize.ToJsonObject(AasCore.Aas3_2.IClass)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27367">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ToJsonObject*"></a>
+  <h4 id="AasCore_Aas3_2_Jsonization_Serialize_ToJsonObject_AasCore_Aas3_2_IClass_" data-uid="AasCore.Aas3_2.Jsonization.Serialize.ToJsonObject(AasCore.Aas3_2.IClass)">ToJsonObject(IClass)</h4>
+  <div class="markdown level1 summary"><p>Serialize an instance of the meta-model into a JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject ToJsonObject(IClass that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.IClass.html">IClass</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Jsonization.html">Jsonization</a>.<a class="xref" href="AasCore.Aas3_2.Jsonization.SerializationException.html">SerializationException</a></td>
+        <td><p>Thrown when a value within <code class="paramref">that</code> instance can not be
+represented in JSON</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Jsonization_Serialize.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Jsonization.Serialize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/jsonization.cs/#L27358" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class Stringification </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class Stringification ">
+    
+    
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_2.Stringification">
+
+
+
+  <h1 id="AasCore_Aas3_2_Stringification" data-uid="AasCore.Aas3_2.Stringification" class="text-break">Class Stringification</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">Stringification</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <span class="xref">AasCore</span>.<a class="xref" href="AasCore.Aas3_2.html">Aas3_2</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_2.dll</h6>
+  <h5 id="AasCore_Aas3_2_Stringification_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Stringification</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_AasSubmodelElementsFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.AasSubmodelElementsFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L285">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_AasSubmodelElementsFromString_" data-uid="AasCore.Aas3_2.Stringification.AasSubmodelElementsFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_AasSubmodelElementsFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.AasSubmodelElementsFromString(System.String)">AasSubmodelElementsFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.AasSubmodelElements.html">AasSubmodelElements</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AasSubmodelElements? AasSubmodelElementsFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.AasSubmodelElements.html">AasSubmodelElements</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_AasSubmodelElementsFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.AasSubmodelElements.html">AasSubmodelElements</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_AssetKindFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.AssetKindFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L195">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_AssetKindFromString_" data-uid="AasCore.Aas3_2.Stringification.AssetKindFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_AssetKindFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.AssetKindFromString(System.String)">AssetKindFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.AssetKind.html">AssetKind</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetKind? AssetKindFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.AssetKind.html">AssetKind</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_AssetKindFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.AssetKind.html">AssetKind</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ContentFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ContentFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1519">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ContentFromString_" data-uid="AasCore.Aas3_2.Stringification.ContentFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ContentFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.ContentFromString(System.String)">ContentFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.Content.html">Content</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Content? ContentFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Content.html">Content</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ContentFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.Content.html">Content</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_DataTypeDefXsdFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.DataTypeDefXsdFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L745">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_DataTypeDefXsdFromString_" data-uid="AasCore.Aas3_2.Stringification.DataTypeDefXsdFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_DataTypeDefXsdFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.DataTypeDefXsdFromString(System.String)">DataTypeDefXsdFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.DataTypeDefXsd.html">DataTypeDefXsd</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataTypeDefXsd? DataTypeDefXsdFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DataTypeDefXsd.html">DataTypeDefXsd</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_DataTypeDefXsdFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.DataTypeDefXsd.html">DataTypeDefXsd</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_DataTypeIec61360FromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.DataTypeIec61360FromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L839">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_DataTypeIec61360FromString_" data-uid="AasCore.Aas3_2.Stringification.DataTypeIec61360FromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_DataTypeIec61360FromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.DataTypeIec61360FromString(System.String)">DataTypeIec61360FromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.DataTypeIec61360.html">DataTypeIec61360</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataTypeIec61360? DataTypeIec61360FromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DataTypeIec61360.html">DataTypeIec61360</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_DataTypeIec61360FromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.DataTypeIec61360.html">DataTypeIec61360</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_DateTimeGlobalAttributeKindFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.DateTimeGlobalAttributeKindFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1705">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_DateTimeGlobalAttributeKindFromString_" data-uid="AasCore.Aas3_2.Stringification.DateTimeGlobalAttributeKindFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_DateTimeGlobalAttributeKindFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.DateTimeGlobalAttributeKindFromString(System.String)">DateTimeGlobalAttributeKindFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.DateTimeGlobalAttributeKind.html">DateTimeGlobalAttributeKind</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTimeGlobalAttributeKind? DateTimeGlobalAttributeKindFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DateTimeGlobalAttributeKind.html">DateTimeGlobalAttributeKind</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_DateTimeGlobalAttributeKindFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.DateTimeGlobalAttributeKind.html">DateTimeGlobalAttributeKind</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_DirectionFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.DirectionFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L405">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_DirectionFromString_" data-uid="AasCore.Aas3_2.Stringification.DirectionFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_DirectionFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.DirectionFromString(System.String)">DirectionFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.Direction.html">Direction</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Direction? DirectionFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Direction.html">Direction</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_DirectionFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.Direction.html">Direction</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_EntityTypeFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.EntityTypeFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L345">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_EntityTypeFromString_" data-uid="AasCore.Aas3_2.Stringification.EntityTypeFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_EntityTypeFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.EntityTypeFromString(System.String)">EntityTypeFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.EntityType.html">EntityType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EntityType? EntityTypeFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.EntityType.html">EntityType</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_EntityTypeFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.EntityType.html">EntityType</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ExecutionStateFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ExecutionStateFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1393">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ExecutionStateFromString_" data-uid="AasCore.Aas3_2.Stringification.ExecutionStateFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ExecutionStateFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.ExecutionStateFromString(System.String)">ExecutionStateFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.ExecutionState.html">ExecutionState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExecutionState? ExecutionStateFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ExecutionState.html">ExecutionState</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ExecutionStateFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.ExecutionState.html">ExecutionState</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ExtentFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ExtentFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1579">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ExtentFromString_" data-uid="AasCore.Aas3_2.Stringification.ExtentFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ExtentFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.ExtentFromString(System.String)">ExtentFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.Extent.html">Extent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Extent? ExtentFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Extent.html">Extent</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ExtentFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.Extent.html">Extent</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_GlobalAttributeKindFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.GlobalAttributeKindFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1643">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_GlobalAttributeKindFromString_" data-uid="AasCore.Aas3_2.Stringification.GlobalAttributeKindFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_GlobalAttributeKindFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.GlobalAttributeKindFromString(System.String)">GlobalAttributeKindFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.GlobalAttributeKind.html">GlobalAttributeKind</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalAttributeKind? GlobalAttributeKindFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.GlobalAttributeKind.html">GlobalAttributeKind</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_GlobalAttributeKindFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.GlobalAttributeKind.html">GlobalAttributeKind</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_KeyTypesFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.KeyTypesFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L629">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_KeyTypesFromString_" data-uid="AasCore.Aas3_2.Stringification.KeyTypesFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_KeyTypesFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.KeyTypesFromString(System.String)">KeyTypesFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.KeyTypes.html">KeyTypes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyTypes? KeyTypesFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.KeyTypes.html">KeyTypes</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_KeyTypesFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.KeyTypes.html">KeyTypes</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_LevelFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.LevelFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1453">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_LevelFromString_" data-uid="AasCore.Aas3_2.Stringification.LevelFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_LevelFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.LevelFromString(System.String)">LevelFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Level? LevelFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Level.html">Level</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_LevelFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.Level.html">Level</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_MessageTypeEnumFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.MessageTypeEnumFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1325">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_MessageTypeEnumFromString_" data-uid="AasCore.Aas3_2.Stringification.MessageTypeEnumFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_MessageTypeEnumFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.MessageTypeEnumFromString(System.String)">MessageTypeEnumFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.MessageTypeEnum.html">MessageTypeEnum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MessageTypeEnum? MessageTypeEnumFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.MessageTypeEnum.html">MessageTypeEnum</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_MessageTypeEnumFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.MessageTypeEnum.html">MessageTypeEnum</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ModellingKindFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ModellingKindFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L67">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ModellingKindFromString_" data-uid="AasCore.Aas3_2.Stringification.ModellingKindFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ModellingKindFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.ModellingKindFromString(System.String)">ModellingKindFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.ModellingKind.html">ModellingKind</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ModellingKind? ModellingKindFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ModellingKind.html">ModellingKind</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ModellingKindFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.ModellingKind.html">ModellingKind</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_QualifierKindFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.QualifierKindFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L129">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_QualifierKindFromString_" data-uid="AasCore.Aas3_2.Stringification.QualifierKindFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_QualifierKindFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.QualifierKindFromString(System.String)">QualifierKindFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.QualifierKind.html">QualifierKind</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifierKind? QualifierKindFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.QualifierKind.html">QualifierKind</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_QualifierKindFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.QualifierKind.html">QualifierKind</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_QuerySelectFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.QuerySelectFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1763">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_QuerySelectFromString_" data-uid="AasCore.Aas3_2.Stringification.QuerySelectFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_QuerySelectFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.QuerySelectFromString(System.String)">QuerySelectFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.QuerySelect.html">QuerySelect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QuerySelect? QuerySelectFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.QuerySelect.html">QuerySelect</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_QuerySelectFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.QuerySelect.html">QuerySelect</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ReferenceTypesFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ReferenceTypesFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L525">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ReferenceTypesFromString_" data-uid="AasCore.Aas3_2.Stringification.ReferenceTypesFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ReferenceTypesFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.ReferenceTypesFromString(System.String)">ReferenceTypesFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.ReferenceTypes.html">ReferenceTypes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReferenceTypes? ReferenceTypesFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ReferenceTypes.html">ReferenceTypes</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ReferenceTypesFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.ReferenceTypes.html">ReferenceTypes</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_SecurityTypeEnumFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.SecurityTypeEnumFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L963">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_SecurityTypeEnumFromString_" data-uid="AasCore.Aas3_2.Stringification.SecurityTypeEnumFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_SecurityTypeEnumFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.SecurityTypeEnumFromString(System.String)">SecurityTypeEnumFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.SecurityTypeEnum.html">SecurityTypeEnum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SecurityTypeEnum? SecurityTypeEnumFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SecurityTypeEnum.html">SecurityTypeEnum</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_SecurityTypeEnumFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.SecurityTypeEnum.html">SecurityTypeEnum</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_SerializationFormatFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.SerializationFormatFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L901">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_SerializationFormatFromString_" data-uid="AasCore.Aas3_2.Stringification.SerializationFormatFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_SerializationFormatFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.SerializationFormatFromString(System.String)">SerializationFormatFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.SerializationFormat.html">SerializationFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SerializationFormat? SerializationFormatFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SerializationFormat.html">SerializationFormat</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_SerializationFormatFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.SerializationFormat.html">SerializationFormat</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ServiceSpecificationProfileEnumFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ServiceSpecificationProfileEnumFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1177">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ServiceSpecificationProfileEnumFromString_" data-uid="AasCore.Aas3_2.Stringification.ServiceSpecificationProfileEnumFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ServiceSpecificationProfileEnumFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.ServiceSpecificationProfileEnumFromString(System.String)">ServiceSpecificationProfileEnumFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.ServiceSpecificationProfileEnum.html">ServiceSpecificationProfileEnum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ServiceSpecificationProfileEnum? ServiceSpecificationProfileEnumFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ServiceSpecificationProfileEnum.html">ServiceSpecificationProfileEnum</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ServiceSpecificationProfileEnumFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.ServiceSpecificationProfileEnum.html">ServiceSpecificationProfileEnum</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_StateOfEventFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.StateOfEventFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L465">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_StateOfEventFromString_" data-uid="AasCore.Aas3_2.Stringification.StateOfEventFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_StateOfEventFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.StateOfEventFromString(System.String)">StateOfEventFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.StateOfEvent.html">StateOfEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StateOfEvent? StateOfEventFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.StateOfEvent.html">StateOfEvent</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_StateOfEventFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.StateOfEvent.html">StateOfEvent</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_StatusCodeFromString_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.StatusCodeFromString(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1259">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_StatusCodeFromString_" data-uid="AasCore.Aas3_2.Stringification.StatusCodeFromString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_StatusCodeFromString_System_String_" data-uid="AasCore.Aas3_2.Stringification.StatusCodeFromString(System.String)">StatusCodeFromString(string)</h4>
+  <div class="markdown level1 summary"><p>Parse the string representation of <a class="xref" href="AasCore.Aas3_2.StatusCode.html">StatusCode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StatusCode? StatusCodeFromString(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.StatusCode.html">StatusCode</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_StatusCodeFromString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">text</code> is not a valid string representation
+of a literal of <a class="xref" href="AasCore.Aas3_2.StatusCode.html">StatusCode</a>,
+return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_AasSubmodelElements__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.AasSubmodelElements%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L235">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_AasSubmodelElements__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.AasSubmodelElements})">ToString(AasSubmodelElements?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(AasSubmodelElements? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.AasSubmodelElements.html">AasSubmodelElements</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_AasSubmodelElements___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_AssetKind__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.AssetKind%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L157">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_AssetKind__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.AssetKind})">ToString(AssetKind?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(AssetKind? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.AssetKind.html">AssetKind</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_AssetKind___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Content__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.Content%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1481">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Content__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.Content})">ToString(Content?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(Content? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Content.html">Content</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Content___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DataTypeDefXsd__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.DataTypeDefXsd%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L682">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DataTypeDefXsd__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.DataTypeDefXsd})">ToString(DataTypeDefXsd?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(DataTypeDefXsd? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DataTypeDefXsd.html">DataTypeDefXsd</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DataTypeDefXsd___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DataTypeIec61360__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.DataTypeIec61360%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L787">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DataTypeIec61360__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.DataTypeIec61360})">ToString(DataTypeIec61360?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(DataTypeIec61360? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DataTypeIec61360.html">DataTypeIec61360</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DataTypeIec61360___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DateTimeGlobalAttributeKind__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.DateTimeGlobalAttributeKind%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1669">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DateTimeGlobalAttributeKind__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.DateTimeGlobalAttributeKind})">ToString(DateTimeGlobalAttributeKind?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(DateTimeGlobalAttributeKind? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.DateTimeGlobalAttributeKind.html">DateTimeGlobalAttributeKind</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_DateTimeGlobalAttributeKind___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Direction__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.Direction%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L370">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Direction__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.Direction})">ToString(Direction?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(Direction? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Direction.html">Direction</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Direction___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_EntityType__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.EntityType%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L310">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_EntityType__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.EntityType})">ToString(EntityType?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(EntityType? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.EntityType.html">EntityType</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_EntityType___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ExecutionState__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.ExecutionState%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1354">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ExecutionState__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.ExecutionState})">ToString(ExecutionState?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(ExecutionState? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ExecutionState.html">ExecutionState</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ExecutionState___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Extent__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.Extent%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1544">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Extent__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.Extent})">ToString(Extent?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(Extent? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Extent.html">Extent</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Extent___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_GlobalAttributeKind__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.GlobalAttributeKind%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1606">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_GlobalAttributeKind__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.GlobalAttributeKind})">ToString(GlobalAttributeKind?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(GlobalAttributeKind? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.GlobalAttributeKind.html">GlobalAttributeKind</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_GlobalAttributeKind___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_KeyTypes__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.KeyTypes%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L572">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_KeyTypes__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.KeyTypes})">ToString(KeyTypes?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(KeyTypes? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.KeyTypes.html">KeyTypes</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_KeyTypes___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Level__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.Level%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1418">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Level__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.Level})">ToString(Level?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(Level? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.Level.html">Level</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_Level___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_MessageTypeEnum__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.MessageTypeEnum%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1287">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_MessageTypeEnum__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.MessageTypeEnum})">ToString(MessageTypeEnum?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(MessageTypeEnum? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.MessageTypeEnum.html">MessageTypeEnum</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_MessageTypeEnum___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ModellingKind__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.ModellingKind%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L32">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ModellingKind__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.ModellingKind})">ToString(ModellingKind?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(ModellingKind? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ModellingKind.html">ModellingKind</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ModellingKind___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_QualifierKind__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.QualifierKind%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L93">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_QualifierKind__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.QualifierKind})">ToString(QualifierKind?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(QualifierKind? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.QualifierKind.html">QualifierKind</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_QualifierKind___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_QuerySelect__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.QuerySelect%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1729">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_QuerySelect__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.QuerySelect})">ToString(QuerySelect?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(QuerySelect? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.QuerySelect.html">QuerySelect</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_QuerySelect___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ReferenceTypes__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.ReferenceTypes%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L490">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ReferenceTypes__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.ReferenceTypes})">ToString(ReferenceTypes?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(ReferenceTypes? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ReferenceTypes.html">ReferenceTypes</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ReferenceTypes___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_SecurityTypeEnum__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.SecurityTypeEnum%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L927">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_SecurityTypeEnum__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.SecurityTypeEnum})">ToString(SecurityTypeEnum?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(SecurityTypeEnum? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SecurityTypeEnum.html">SecurityTypeEnum</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_SecurityTypeEnum___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_SerializationFormat__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.SerializationFormat%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L865">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_SerializationFormat__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.SerializationFormat})">ToString(SerializationFormat?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(SerializationFormat? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.SerializationFormat.html">SerializationFormat</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_SerializationFormat___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ServiceSpecificationProfileEnum__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.ServiceSpecificationProfileEnum%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1065">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ServiceSpecificationProfileEnum__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.ServiceSpecificationProfileEnum})">ToString(ServiceSpecificationProfileEnum?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(ServiceSpecificationProfileEnum? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.ServiceSpecificationProfileEnum.html">ServiceSpecificationProfileEnum</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_ServiceSpecificationProfileEnum___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_StateOfEvent__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.StateOfEvent%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L430">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_StateOfEvent__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.StateOfEvent})">ToString(StateOfEvent?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(StateOfEvent? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.StateOfEvent.html">StateOfEvent</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_StateOfEvent___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_StatusCode__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification.ToString(System.Nullable%7BAasCore.Aas3_2.StatusCode%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L1213">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Stringification_ToString_" data-uid="AasCore.Aas3_2.Stringification.ToString*"></a>
+  <h4 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_StatusCode__" data-uid="AasCore.Aas3_2.Stringification.ToString(System.Nullable{AasCore.Aas3_2.StatusCode})">ToString(StatusCode?)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the string representation of <code class="paramref">that</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ToString(StatusCode? that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_2.StatusCode.html">StatusCode</a>?</td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Stringification_ToString_System_Nullable_AasCore_Aas3_2_StatusCode___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code class="paramref">that</code> is not a valid literal, return <code>null</code>.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Stringification.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Stringification%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/stringification.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

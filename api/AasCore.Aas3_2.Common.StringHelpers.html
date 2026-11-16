@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class Common.StringHelpers </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class Common.StringHelpers ">
+    
+    <meta name="description" content="Provide string operations which follow the Python implementation, since Python is the language of the meta-model specifications.">
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_2.Common.StringHelpers">
+
+
+
+  <h1 id="AasCore_Aas3_2_Common_StringHelpers" data-uid="AasCore.Aas3_2.Common.StringHelpers" class="text-break">Class Common.StringHelpers</h1>
+  <div class="markdown level0 summary"><p>Provide string operations which follow the Python implementation, since
+Python is the language of the meta-model specifications.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">Common.StringHelpers</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <span class="xref">AasCore</span>.<a class="xref" href="AasCore.Aas3_2.html">Aas3_2</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_2.dll</h6>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Common.StringHelpers</code></pre>
+  </div>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The lengths and the positions count the characters (code points), and not
+the UTF-16 code units of the C# strings. Hence, a character beyond the Basic
+Multilingual Plane counts as one, though it takes two UTF-16 code units
+(a surrogate pair).</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers_CompareByCodePoints_System_String_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers.CompareByCodePoints(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L230">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Common_StringHelpers_CompareByCodePoints_" data-uid="AasCore.Aas3_2.Common.StringHelpers.CompareByCodePoints*"></a>
+  <h4 id="AasCore_Aas3_2_Common_StringHelpers_CompareByCodePoints_System_String_System_String_" data-uid="AasCore.Aas3_2.Common.StringHelpers.CompareByCodePoints(System.String,System.String)">CompareByCodePoints(string, string)</h4>
+  <div class="markdown level1 summary"><p>Compare <code class="paramref">that</code> and <code class="paramref">other</code> by their
+code points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CompareByCodePoints(string that, string other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>-1 if <code class="paramref">that</code> comes before <code class="paramref">other</code>,
+0 if they are equal, and 1 otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_CompareByCodePoints_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>We follow the Python implementation of the string comparison, since Python is
+the language of the meta-model specifications. Unlike
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.compareordinal#system-string-compareordinal(system-string-system-string)">CompareOrdinal(string, string)</a>, which compares
+the UTF-16 code units, this comparison sorts the characters beyond
+the Basic Multilingual Plane after all the others.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers_Find_System_String_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers.Find(System.String%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L170">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Common_StringHelpers_Find_" data-uid="AasCore.Aas3_2.Common.StringHelpers.Find*"></a>
+  <h4 id="AasCore_Aas3_2_Common_StringHelpers_Find_System_String_System_String_System_Int64_" data-uid="AasCore.Aas3_2.Common.StringHelpers.Find(System.String,System.String,System.Int64)">Find(string, string, long)</h4>
+  <div class="markdown level1 summary"><p>Find the first <code class="paramref">sub</code> in <code class="paramref">text</code> from
+<code class="paramref">start</code> on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long Find(string text, string sub, long start = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sub</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><p>The position of <code class="paramref">sub</code> in <code class="paramref">text</code>,
+or -1 if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_Find_System_String_System_String_System_Int64__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>We follow the Python implementation of <code>str.find</code>, since Python is
+the language of the meta-model specifications. Hence, the positions count
+the characters (code points), a negative <code class="paramref">start</code> counts
+from the end, and a <code class="paramref">start</code> beyond the end of
+<code class="paramref">text</code> gives -1. We compare the strings ordinally.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers_LStrip_System_String_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers.LStrip(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L311">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Common_StringHelpers_LStrip_" data-uid="AasCore.Aas3_2.Common.StringHelpers.LStrip*"></a>
+  <h4 id="AasCore_Aas3_2_Common_StringHelpers_LStrip_System_String_System_String_" data-uid="AasCore.Aas3_2.Common.StringHelpers.LStrip(System.String,System.String)">LStrip(string, string)</h4>
+  <div class="markdown level1 summary"><p>Strip the longest prefix of <code class="paramref">text</code> which consists only
+of the characters listed in <code class="paramref">chars</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string LStrip(string text, string chars)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">chars</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_LStrip_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>We follow the Python implementation of <code>str.lstrip</code>, since Python is
+the language of the meta-model specifications. Hence, we strip
+the characters (code points), and not the UTF-16 code units. Otherwise,
+we would strip a half of a surrogate pair if a character in
+<code class="paramref">chars</code> shared the high surrogate with it.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers_Len_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers.Len(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L86">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Common_StringHelpers_Len_" data-uid="AasCore.Aas3_2.Common.StringHelpers.Len*"></a>
+  <h4 id="AasCore_Aas3_2_Common_StringHelpers_Len_System_String_" data-uid="AasCore.Aas3_2.Common.StringHelpers.Len(System.String)">Len(string)</h4>
+  <div class="markdown level1 summary"><p>Count the characters (code points) of <code class="paramref">text</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Len(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_Len_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>We follow the Python implementation of <code>len</code>, since Python is
+the language of the meta-model specifications. Hence, a character beyond
+the Basic Multilingual Plane counts as one, unlike in <code>text.Length</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers_RStrip_System_String_System_String_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers.RStrip(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L339">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Common_StringHelpers_RStrip_" data-uid="AasCore.Aas3_2.Common.StringHelpers.RStrip*"></a>
+  <h4 id="AasCore_Aas3_2_Common_StringHelpers_RStrip_System_String_System_String_" data-uid="AasCore.Aas3_2.Common.StringHelpers.RStrip(System.String,System.String)">RStrip(string, string)</h4>
+  <div class="markdown level1 summary"><p>Strip the longest suffix of <code class="paramref">text</code> which consists only
+of the characters listed in <code class="paramref">chars</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RStrip(string text, string chars)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">chars</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_RStrip_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>We follow the Python implementation of <code>str.rstrip</code>, since Python is
+the language of the meta-model specifications. Hence, we strip
+the characters (code points), and not the UTF-16 code units. Otherwise,
+we would strip a half of a surrogate pair, or even a whole character, if
+the characters in <code class="paramref">chars</code> shared the surrogates with it.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers_Slice_System_String_System_Int64_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers.Slice(System.String%2CSystem.Int64%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L137">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_2_Common_StringHelpers_Slice_" data-uid="AasCore.Aas3_2.Common.StringHelpers.Slice*"></a>
+  <h4 id="AasCore_Aas3_2_Common_StringHelpers_Slice_System_String_System_Int64_System_Nullable_System_Int64__" data-uid="AasCore.Aas3_2.Common.StringHelpers.Slice(System.String,System.Int64,System.Nullable{System.Int64})">Slice(string, long, long?)</h4>
+  <div class="markdown level1 summary"><p>Slice <code class="paramref">text</code> from <code class="paramref">start</code> up to
+<code class="paramref">end</code>, exclusive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Slice(string text, long start, long? end = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_2_Common_StringHelpers_Slice_System_String_System_Int64_System_Nullable_System_Int64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>We follow the Python implementation of slicing, since Python is
+the language of the meta-model specifications. Hence, the positions count
+the characters (code points), a negative position counts from the end,
+the positions out of range are clamped to the string, and the slice is
+empty if <code class="paramref">start</code> is not before <code class="paramref">end</code>.
+If <code class="paramref">end</code> is not given, we slice up to the end of
+<code class="paramref">text</code>.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_2_Common_StringHelpers.md&amp;value=---%0Auid%3A%20AasCore.Aas3_2.Common.StringHelpers%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/eclipse-aascw/aas-core3.2-csharp/blob/main/src/AasCore.Aas3_2/common.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
